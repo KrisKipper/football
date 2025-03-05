@@ -1,0 +1,15 @@
+mixin modalTypeDefault(params)
+    -
+        const classes = params.mix ? `modal fade ${params.mix}` : 'modal fade';
+
+    div(tabindex='-1' id=params.id class= classes)
+        .modal-dialog&attributes(attributes)
+            .modal-content
+                .modal-header
+                    if(params.title)
+                        span.modal-title!= params.title
+                    button.modal-close-btn(data-bs-dismiss="modal")
+                        +icon({mix: '_size_sm', id: 'cross'})
+                block
+
+

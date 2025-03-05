@@ -1,0 +1,6 @@
+mixin modalBodyTypeDefault(params)
+    -
+        const classes = params.mix ? `modal-body ${params.mix}` : 'modal-body';
+
+    div(class= classes)
+        block

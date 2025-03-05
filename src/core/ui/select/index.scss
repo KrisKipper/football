@@ -1,0 +1,513 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.select {
+  position: relative;
+  border: 1px solid config.$colors-cyan-100;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  width: 100%;
+
+  &__toggle-icon {
+    transition: transform 0.3s ease;
+    margin-right: 0;
+    margin-left: auto;
+    color: config.$colors-cyan-100;
+  }
+
+  &__toggle-icon._rotate {
+    transform: rotate(180deg);
+  }
+
+  &:disabled, &._disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover, &:focus {
+    border: 1px solid config.$colors-black-100;
+
+    .select__toggle-icon {
+      color: config.$colors-black-100;
+    }
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    display: none;
+  }
+
+  &__trigger, &__selected-option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+
+    span {
+      color: config.$colors-black-100;
+      font-family: config.$font-secondary;
+      line-height: 20px;
+      max-width: calc(100% - 28px);
+    }
+  }
+
+  &__trigger._selected {
+
+  }
+
+  &__dropdown {
+    background-color: config.$colors-white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 210px;
+    z-index: 101;
+    left: -1px;
+    flex-wrap: nowrap;
+    top: calc(100% + 1px);
+    scrollbar-width: none;
+    padding: 5px 0;
+    align-items: flex-start;
+    border: 1px solid config.$colors-cyan-100;
+    scrollbar-color: transparent transparent;
+    min-width: 80px;
+    width: calc(100% + 2px);
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__dropdown._hidden {
+    display: none;
+  }
+
+  &__dropdown-item {
+    box-sizing: border-box;
+    cursor: pointer;
+    color: config.$colors-black-100;
+    font-family: config.$font-secondary;
+    line-height: 20px;
+    display: flex;
+    padding: 10px 12px;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: transparent;
+    transition: background-color .2s ease;
+
+    &:checked, &:hover, &._active {
+      background: config.$colors-cyan-20;
+    }
+
+    &:disabled, &.disabled {
+      opacity: 0.5;
+      cursor: initial;
+    }
+  }
+}
+
+.select._type_check {
+
+  .select__dropdown-item {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 40px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 10px);
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 2px solid config.$colors-cyan-100;
+      background: config.$colors-white;
+      cursor: pointer;
+      margin-top: 1px;
+    }
+  }
+
+  .select__dropdown-item._checked:before {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" rx="4" fill="%23BFCFD5"/><path d="M15.63 5.87656C15.1374 5.37448 14.3365 5.37448 13.8439 5.87656L8.42101 11.3956L6.15611 9.0909C5.66346 8.58882 4.8626 8.58882 4.36996 9.0909C3.87668 9.59298 3.87668 10.4069 4.36996 10.9089L7.52794 14.1233C7.77426 14.3746 8.09763 14.5 8.42101 14.5C8.74439 14.5 9.06776 14.3746 9.31409 14.1233L15.63 7.69459C16.1233 7.19251 16.1233 6.37864 15.63 5.87656Z" fill="%23141414"/></svg>') center/20px 20px no-repeat;
+    border: none;
+  }
+}
+
+.select._mob-dropdown_top {
+
+  .select__dropdown {
+
+    @media only screen and (max-width: config.$bp-sm) {
+      top: -240%;
+    }
+  }
+}
+
+
+.select-filter {
+  max-width: 130px;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: rgba(0, 32, 51, 0.6);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &__signature {
+    margin-top: 8px;
+    button {
+      color: #0078d2;
+      text-align: left;
+      font-family: Ubuntu;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+
+  &__copy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__signature:hover {
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    gap: 8px;
+    img {
+      box-sizing: content-box;
+      padding: 5px;
+      width: 12px;
+      height: 12px;
+      align-self: center;
+      border-radius: 4px;
+      background: rgba(0, 66, 105, 0.07);
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.select2-container {
+  max-width: 130px;
+}
+
+.select2-results__option:hover {
+  background-color: white !important;
+  color: config.$colors-red !important;
+  border-left: 1px solid #be192d !important;
+
+}
+
+.select2-results__option--highlighted {
+  background-color: none;
+}
+
+.select2-results__option--selectable {
+  color: #002033 !important;
+  background-color: white !important;
+}
+.select2-selection--multiple {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+// .select2-selection--multiple::after {
+//   content: '';
+//   position: absolute;
+//   background-image: url('../assets/media/IconSelect.svg');
+//   background-color: white;
+//   width: 40px;
+//   height: 39px;
+//   cursor: pointer;
+//   background-position: center;
+//   right: -1px;
+//   top: 0px;
+//   background-repeat: no-repeat;
+//   border-top: 1px solid transparent;
+//   border-right: 1px solid transparent;
+//   border-left: 1px solid rgba(0, 66, 105, 0.28);
+//   border-bottom: 1px solid rgba(0, 66, 105, 0.28);
+//   transform: scale(0.9);
+// }
+// .select2-selection--multiple._rotation::after {
+//   transform: rotate(180deg);
+//   border-left: 1px solid rgba(0, 66, 105, 0.28);
+//   border-right: 1px solid rgba(0, 66, 105, 0.28);
+//   border-top: 1px solid rgba(0, 66, 105, 0.28);
+// }
+
+.select-multiple {
+  .select2-results__option {
+    position: relative !important;
+    display: flex !important;
+    span {
+      padding-left: 18px;
+    }
+  }
+  .select2-results__option:hover {
+    background-color: white !important;
+    color: config.$colors-red !important;
+    border-left: none !important;
+  }
+  .select2-results__option:after {
+    content: '';
+    position: absolute !important;
+    background-image: url('../assets/media/Checkbox.svg');
+    width: 20px;
+    height: 20px;
+  }
+  .select2-results__option--selected::after {
+    background-image: url('../assets/media/box1.svg');
+  }
+  .select2-results__option:first-child {
+    display: none !important;
+  }
+
+  .select2-results__option--highlighted {
+    background-color: white !important;
+    color: #002033 !important;
+  }
+}
+
+.select__title-option {
+  color: rgba(0, 32, 51, 0.35) !important;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.select2-selection {
+  height: 40px;
+  display: flex !important;
+  align-items: center !important;
+  overflow: visible !important;
+}
+.select2-selection__rendered {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.select2-selection__rendered[title='Выберите тип'] {
+  color: rgba(0, 32, 51, 0.35) !important;
+}
+.select2-selection__rendered[title='Укажите место'] {
+  color: rgba(0, 32, 51, 0.35) !important;
+}
+.select2-selection__rendered[title='Укажите город'] {
+  color: rgba(0, 32, 51, 0.35) !important;
+}
+.select2-selection__rendered[title='Выберите кол-во звезд отеля'] {
+  color: rgba(0, 32, 51, 0.35) !important;
+}
+
+.select2-selection__arrow {
+  top: 0 !important;
+  border-left: 1px solid
+    var(--control-default-bg-border, rgba(0, 66, 105, 0.28));
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.select._modal {
+  width: 100%;
+}
+
+.select._pt_md {
+  padding-top: 24px;
+}
+
+.select._width_max {
+  width: 800px;
+}
+
+.select2-selection__choice:not([title]) {
+  border: none !important;
+  background-color: white !important;
+  padding-left: 3px !important;
+  span {
+    display: none !important;
+  }
+  button {
+    display: none !important;
+  }
+  li {
+    background-color: white !important;
+  }
+}
+.select._tag {
+  .select2-selection__choice:not([title])::after {
+    content: 'Выберите теги для дальнейшего удобного поиска';
+    color: rgba(0, 32, 51, 0.35);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+.select._town {
+  .select2-selection__choice:not([title])::after {
+    content: 'Укажите города';
+    color: rgba(0, 32, 51, 0.35);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.select._hotel {
+  .select2-selection__choice:not([title])::after {
+    content: 'Выберите кол-во звезд отеля';
+  }
+}
+
+.select2-selection__choice[title] {
+  border-radius: 4px !important;
+  background: rgba(0, 66, 105, 0.07) !important;
+  display: inline-flex !important;
+  flex-direction: row-reverse !important;
+  border: none !important;
+  padding-left: 8px !important;
+  button {
+    position: relative !important;
+    width: 16px;
+    height: 16px;
+    span {
+      display: none !important;
+    }
+    border-right: none !important;
+  }
+  button:after {
+    content: '';
+    background-image: url('../assets/media/IconClose.svg');
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 5px;
+    top: 5px;
+  }
+}
+
+.select._logic {
+  .select__signature {
+    margin-top: 0px;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.select2-selection__clear {
+  display: none;
+}
+
+.select2-search {
+  display: none;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: flex;
+  // flex-wrap: wrap;
+  // padding-right: 35px;
+}
+
+.select2-container .selection {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+.select2-selection__choice__display,
+.select-filter-dropdown {
+  font-family: config.$font-secondary;
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single {
+  min-height: 40px;
+} 
+.select2-container--default .select2-selection--multiple {
+  height: auto;
+}
+
+.select2-container--default .select2-selection--multiple {
+  border: 1px solid #BFCFD5;
+  border-radius: 0;
+}
+
+.select2-results__option {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.75' y='0.75' width='18.5' height='18.5' rx='3.25' stroke='%23BFCFD5' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position: 12px center;
+
+  &--selected {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' rx='4' fill='%23BFCFD5'/%3E%3Cpath d='M15.63 5.87656C15.1374 5.37448 14.3365 5.37448 13.8439 5.87656L8.42101 11.3956L6.15611 9.0909C5.66346 8.58882 4.8626 8.58882 4.36996 9.0909C3.87668 9.59298 3.87668 10.4069 4.36996 10.9089L7.52794 14.1233C7.77426 14.3746 8.09763 14.5 8.42101 14.5C8.74439 14.5 9.06776 14.3746 9.31409 14.1233L15.63 7.69459C16.1233 7.19251 16.1233 6.37864 15.63 5.87656Z' fill='%23141414'/%3E%3C/svg%3E");
+  }
+}
+
+.select2-selection__choice[title] button:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cscript xmlns=''/%3E%3Cg id='IconClose' opacity='0.4'%3E%3Cpath id='Vector' fill-rule='evenodd' clip-rule='evenodd' d='M3.75699 2.34314L2.34277 3.75735L6.58541 7.99999L2.34277 12.2426L3.75699 13.6568L7.99963 9.41421L12.2423 13.6568L13.6565 12.2426L9.41384 7.99999L13.6565 3.75735L12.2423 2.34314L7.99963 6.58578L3.75699 2.34314Z' fill='%2300395C' fill-opacity='0.8'/%3E%3C/g%3E%3Cscript xmlns=''/%3E%3C/svg%3E");
+  right: 3px;
+  top: 4px;
+}
+
+.select2-selection__choice:first-child {
+  display: none !important;
+}
+
+// .select._search {
+//   .select2-search {
+//     overflow: visible;
+//     display: flex;
+//     .select2-search__field {
+//       height: 20px !important;
+//     }
+//     textarea::placeholder {
+//       color: rgba(0, 32, 51, 0.35) !important;
+//       font-family: Ubuntu !important;
+//       font-size: 16px !important;
+//       font-style: normal;
+//       font-weight: 400;
+//       line-height: 150%;
+//     }
+//   }
+// }
+

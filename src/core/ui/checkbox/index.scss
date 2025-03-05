@@ -1,0 +1,61 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.checkbox {
+  min-width: 20px;
+  min-height: 20px;
+
+  input {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 32px;
+    cursor: pointer;
+    color: config.$colors-black-100;
+    font-family: config.$font-secondary;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1.5px solid config.$colors-cyan-100;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+
+  input:checked + label:before {
+    background: config.$colors-cyan-100 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" rx="4" fill="%23BFCFD5"/><path d="M15.63 5.87656C15.1374 5.37448 14.3365 5.37448 13.8439 5.87656L8.42101 11.3956L6.15611 9.0909C5.66346 8.58882 4.8626 8.58882 4.36996 9.0909C3.87668 9.59298 3.87668 10.4069 4.36996 10.9089L7.52794 14.1233C7.77426 14.3746 8.09763 14.5 8.42101 14.5C8.74439 14.5 9.06776 14.3746 9.31409 14.1233L15.63 7.69459C16.1233 7.19251 16.1233 6.37864 15.63 5.87656Z" fill="%23141414"/></svg>') center/20px 20px no-repeat;
+  }
+
+  input:disabled + label {
+    opacity: .4;
+    cursor: auto;
+
+    &:before {
+      opacity: .4;
+      cursor: initial;
+    }
+  }
+
+  &.error label {
+    color: config.$colors-red;
+    border-color: config.$colors-red;
+
+    &:before {
+      border-color: config.$colors-red;
+    }
+  }
+}

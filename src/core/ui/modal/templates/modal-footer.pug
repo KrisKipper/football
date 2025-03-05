@@ -1,0 +1,8 @@
+mixin modalFooterTypeDefault(params)
+    -
+        const classes = params.mix ? `modal-footer ${params.mix}` : 'modal-footer';
+
+    div(class= classes)
+        +buttonTypeDefault({mix: '_theme_black modal-footer-button', text: params.btnText})
+        block
+

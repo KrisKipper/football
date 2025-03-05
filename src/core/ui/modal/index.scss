@@ -1,0 +1,392 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.60);
+
+  &-dialog {
+    margin: auto;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      align-items: baseline;
+    }
+  }
+
+  &-content {
+    background: config.$colors-white;
+    min-width: 520px;
+    padding: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      min-width: unset;
+      width: 100vw;
+      padding: 0 0 20px 0;
+      gap: 20px;
+      align-self: center;
+    }
+  }
+
+  &-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 32px 32px 0 32px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      padding: 20px 20px 0 20px;
+    }
+  }
+
+  &-body {
+    padding: 0 32px;
+    @include lib.flex-col;
+    gap: 32px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      padding: 0 20px;
+      gap: 20px;
+    }
+  }
+
+  &-body._center {
+    align-items: center;
+  }
+
+  &-footer {
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      padding: 0 20px;
+    }
+  }
+
+  &-footer-text {
+    color: config.$colors-black-100;
+    display: inline-flex;
+    gap: 3px;
+    margin-top: 20px;
+  }
+
+  &-footer-subtext {
+    color: config.$colors-black-60;
+    text-align: center;
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+
+    a {
+      color: config.$colors-red;
+      font-family: config.$font-secondary;
+    }
+  }
+
+  &-footer-subtext._margin_l {
+    margin-top: 32px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &-footer-text a {
+    color: config.$colors-red;
+  }
+
+  &-footer-text, &-footer-text a {
+    text-align: center;
+    font-family: config.$font-secondary;
+    line-height: 130%;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      font-size: 14px;
+    }
+  }
+
+  &-subtext {
+    color: config.$colors-black-80;
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &-textarea {
+
+    textarea {
+      min-height: 140px;
+    }
+  }
+
+  &-content-title {
+    color: config.$colors-black-100;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  &-warning {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255, 57, 0, 0.10);
+    color: config.$colors-red;
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &-instruction {
+    color: config.$colors-black-80;
+  }
+
+  &-instruction a {
+    color: config.$colors-red;
+    margin: 0 3px;
+  }
+
+  &-instruction, &-instruction a {
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &-text {
+    color: config.$colors-black-100;
+    font-family:  config.$font-secondary;
+    line-height: 130%;
+
+    strong, b {
+      color: config.$colors-black-100;
+      font-family:  config.$font-secondary;
+      line-height: 130%;
+      font-weight: 700;
+      margin: 0 3px;
+    }
+  }
+
+  &-text._center {
+    text-align: center;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      gap: 15px;
+    }
+  }
+
+  &-selects {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &-conteiner {
+    @include  lib.flex-col;
+    gap: 30px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      gap: 20px;
+    }
+  }
+
+  &-title {
+    color: config.$colors-black-100;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  &-close-btn {
+    color: config.$colors-cyan-100;
+    margin: 0 0 0 auto;
+  }
+
+  &-footer-button {
+    width: 100%;
+    padding: 20px 24px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      padding: 12px 20px;
+    }
+
+    .button__text {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+
+      @media only screen and (max-width: config.$bp-sm) {
+        font-size: 16px;
+        letter-spacing: 0.32px;
+      }
+    }
+  }
+
+  &-message {
+    padding: 15px;
+    background-color: rgb(255, 57, 0, 0.10);
+
+    span {
+      color: config.$colors-red;
+      font-family:  config.$font-secondary;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+    }
+  }
+
+  &-size {
+    .modal-form {
+      gap: 24px;
+
+      hr {
+        border-top: #BFCFD5;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+    }
+    .modal-dialog {
+      max-width: 926px;
+      width: 100%;
+    }
+    .modal-content {
+      width: 100%;
+      max-height: 95vh;
+      height: auto;
+      overflow-y: auto;
+      gap: 48px;
+
+      ol {
+        padding: 0 32px;
+
+        @media only screen and (max-width: config.$bp-sm) {
+          padding: 0 20px;
+        }
+
+        li {
+          font-family: config.$font-secondary;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+
+          @media only screen and (max-width: config.$bp-sm) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    h3 {
+      margin-top: 0;
+      font-family:  config.$font-primary;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+    p {
+      font-family:  config.$font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+    }
+    &__row   {
+      display: flex;
+      column-gap: 12px;
+    }
+    &__col {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      span {
+        font-family: config.$font-secondary;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+    }
+    &__message {
+      display: flex;
+      column-gap: 24px;
+      font-family: config.$font-secondary;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      padding: 24px;
+      background-color: #FF39001A;
+
+      span {
+        font-weight: 700;
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      svg {
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.modal._type_content {
+
+  .modal-content {
+    background-color: transparent;
+    width: max-content;
+  }
+
+  .modal__img, .modal__iframe {
+    height: 90vh;
+    width: auto;
+  }
+}
+
+.modal {
+  &--gap-sm {
+    .modal-content {
+      gap: 8px;
+    }
+    .modal-footer {
+      margin-top: 24px;
+    }
+  }
+}

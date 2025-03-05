@@ -1,0 +1,253 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.header {
+  width: 100vw;
+  padding: 28px 0 20px;
+  background: config.$colors-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid config.$colors-cyan-100;
+  z-index: 800;
+
+  @media only screen and (max-width: config.$bp-md) {
+    padding: 24px 0;
+  }
+
+  @media only screen and (max-width: config.$bp-sm) {
+    padding: 20px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid config.$colors-cyan-100;
+    padding-bottom: 28px;
+
+    @media only screen and (max-width: config.$bp-md) {
+      padding: 0;
+      border: none;
+    }
+
+    ._type_logo {
+      @media only screen and (max-width: config.$bp-sm) {
+        width: 140px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__top-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      gap: 16px;
+    }
+
+    .icon {
+      @media only screen and (max-width: config.$bp-sm) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__nav-split {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    @media only screen and (max-width: config.$bp-md) {
+      display: none;
+    }
+  }
+
+  &__nav-title {
+    color: config.$colors-black-100;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    transition: .3s ease;
+    width: max-content;
+
+    &:hover, &:active, &.active {
+      color: config.$colors-red;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    @media only screen and (max-width: config.$bp-md) {
+      gap: 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    max-height: 24px;
+
+    @media only screen and (max-width: config.$bp-md) {
+      gap: 0;
+      justify-content: center;
+    }
+
+    &:hover, &:active, &.active {
+
+      .header__nav-title {
+        color: config.$colors-red;
+      }
+    }
+  }
+
+  &__button._type_mob-menu {
+    border-top: 1px solid config.$colors-cyan-100;
+    padding: 26px;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  &__nav-subtitle {
+    color: config.$colors-black-100;
+    font-family: config.$font-secondary;
+    font-size: 12px;
+    line-height: 100%;
+    opacity: .4;
+  }
+
+  &__icon-container {
+    position: relative;
+  }
+
+  &__count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  }
+
+  &__content {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @media only screen and (max-width: config.$bp-md) {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 801;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      padding-top: 0;
+      background: rgba(0, 0, 0, 0.60);
+      align-items: flex-end;
+    }
+  }
+
+  &__content.active {
+    @media only screen and (max-width: config.$bp-md) {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    background: config.$colors-white;
+
+    @media only screen and (max-width: config.$bp-md) {
+      height: 100vh;
+      min-width: 360px;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -100%;
+      animation: slideIn 0.9s forwards;
+    }
+
+    @media only screen and (max-width: config.$bp-sm) {
+      max-width: 300px;
+      width: 83.33vw;
+      min-width: 83.33vw;
+    }
+  }
+
+  &__close-icon {
+    display: none;
+
+    @media only screen and (max-width: config.$bp-md) {
+      display: block;
+      margin: 0 20px 0 auto;
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media only screen and (max-width: config.$bp-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 20px;
+    }
+  }
+
+  &__search {
+    max-width: 296px;
+  }
+
+  &__burger {
+    background: transparent;
+    border: none;
+  }
+
+  &__menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: auto;
+    margin-bottom: 0;
+
+    .icon._size_sm {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.header {
+  .input._type_search {
+    transition: all .3s;
+  }
+
+  &__content {
+    &.open {
+      .header__menu {
+        display: none;
+      }
+      .input._type_search {
+        max-width: 100%;
+        .input__field {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

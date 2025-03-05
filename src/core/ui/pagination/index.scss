@@ -1,0 +1,41 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container, &__counter {
+    display: flex;
+  }
+
+  &__container {
+    color: config.$colors-black-100;
+    font-family: config.$font-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &__link {
+    color: inherit;
+    font-family: config.$font-secondary;
+    font-weight: inherit;
+    transition: all 0.3s ease;
+    padding: 0 10px;
+
+    &:hover {
+      color: config.$colors-red;
+    }
+    &._type_active {
+      color: config.$colors-red;
+    }
+  }
+
+  &._margin_m {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

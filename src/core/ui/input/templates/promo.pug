@@ -1,0 +1,25 @@
+mixin inputTypePromo(params)
+    -
+        const classes = params.mix ? `input _type_promo ${params.mix}` : 'input _type_promo ';
+
+
+    form(class= classes)
+        input.input__field(type="text" id=params.id value= params.value placeholder=params.placeholder name= params.name)
+        .input__applied-message Promocode applied
+        button.input__reset-button(type="reset")
+            +icon({
+                mix: '_size_sm ',
+                id: 'cross'
+            })
+        button.input__submit-button(type="button")
+            +icon({
+                mix: '_size_sm ',
+                id: 'arrow-right-white'
+            })
+        .input__applied-icon
+            +icon({
+                mix: '_size_s _theme_white',
+                id: 'check'
+            })
+        if(params.helpText)
+            span.input__text!= params.helpText

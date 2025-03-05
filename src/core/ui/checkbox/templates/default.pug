@@ -1,0 +1,10 @@
+mixin checkboxTypeDefault(params)
+    -
+        const classes = params.mix ? `checkbox ${params.mix}` : 'checkbox';
+        const inputAttributes = { ...params };
+        delete inputAttributes.mix;
+        delete inputAttributes.label;
+
+    div(class= classes)
+        input(type="checkbox" name= params.name id= params.id value= params.name)&attributes(inputAttributes)
+        label(for= params.id)!= params.label

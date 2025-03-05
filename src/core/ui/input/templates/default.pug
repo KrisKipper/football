@@ -1,0 +1,10 @@
+mixin inputTypeDefault(params)
+    -
+        const classes = params.mix ? `input ${params.mix}` : 'input';
+
+    div(class= classes data-type= params.dataType)
+        if(params.label)
+            label.input__label(for=params.id)!= params.label
+        input.input__field(type=params.type id=params.id value= params.value placeholder= params.placeholder data-mask= params.mask name= params.name)&attributes(attributes)
+        if(params.helpText)
+            span.input__text!= params.helpText

@@ -1,0 +1,94 @@
+footer.footer
+    .footer__layout
+        .footer__container
+            .container
+                .footer__subscribe
+                    form.footer__subscribe-form
+                        +inputTypeDefault({
+                            mix: 'footer__input',
+                            placeholder: 'E-mail',
+                            type: 'text',
+                            mask: 'email',
+                        })
+                        +buttonTypeDefault({
+                            mix: '_size_sm _theme_black',
+                            type: 'button',
+                            text: 'Subscribe'
+                        })
+                    span.footer__subscribe-text By clicking the Subscribe button, I consent to the processing of my personal data in accordance with the privacy policy
+        .footer__container
+            .container
+                .footer__content
+                    .footer__info
+                        +icon({
+                            mix: '_type_logo',
+                            type: 'default',
+                            id: 'logo'
+                        })
+                        nav.footer__nav
+                            .footer__col
+                              span.footer__links-title Online Shop
+                              .footer__links
+                                a(href="javascript:").footer__link Patterns
+                                a(href="javascript:").footer__link Video tutorials
+                                a(href="javascript:").footer__link Payment
+                                a(href="javascript:").footer__link FAQ
+                            .footer__col
+                              span.footer__links-title Company
+                              .footer__links
+                                a(href="javascript:").footer__link Blog
+                                a(href="javascript:").footer__link About us
+                                a(href="javascript:").footer__link Contacts
+                                a(href="javascript:").footer__link Feedback
+                            .footer__col
+                                span.footer__links-title Contacts
+                                .footer__links
+                                  a(href="mailto: info@en-grasser.com").footer__link info@en-grasser.com
+                                  .row-flex._gap_md._center
+                                    a(href="javascript:")
+                                        +icon({
+                                            mix: '_size_sm',
+                                            id: 'insta'
+                                        })
+                                    a(href="javascript:")
+                                        +icon({
+                                            mix: '_size_sm',
+                                            id: 'youtube'
+                                        })
+                                    a(href="javascript:")
+                                        +icon({
+                                            mix: '_size_sm',
+                                            id: 'pint'
+                                        })
+
+                            .footer__col._mob-width_full
+                                span.footer__links-title Payments
+                                .row-flex._gap_md._center
+                                    +icon({
+                                        mix: '_max-size-sm',
+                                        id: 'mastercard'
+                                    })
+                                    +icon({
+                                        mix: '_max-size-md',
+                                        id: 'paypal'
+                                    })
+
+                            .footer__col
+                              .footer__links-title._margin_none
+                                  +icon({
+                                      mix: '_size_sm',
+                                      id: 'lang'
+                                  })
+                                  | EN
+
+                    .footer__bottom
+                        span.footer__ps © 2014-2022 Grasser.ru
+                        .footer__bottom-links
+                            a.footer__link(href="javascript:") Privacy police
+                            a.footer__link(href="javascript:") Terms of personal use
+                            a.footer__link(href="javascript:") Sitemap
+
+
+
+
+

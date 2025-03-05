@@ -1,0 +1,27 @@
+mixin inputTypeSearch(params)
+    -
+        const classes = params.mix ? `input _type_search ${params.mix}` : 'input _type_search';
+
+    form(class= classes)
+        .input__field
+            if (params.hideIcon === false)
+              button.input__search-button(type="button")
+                  +icon({
+                      mix: '_size_sm',
+                      id: 'search'
+                  })
+            input.input__field-input(type="text" id=params.id value= params.value placeholder=params.placeholder name= params.name)
+            button.input__cross-button(type="button")
+                +icon({
+                    mix: '_size_sm',
+                    id: 'cross'
+                })
+        button.input__submit-button(type="button")
+            +icon({
+                mix: '_size_sm',
+                id: 'arrow-right-white'
+            })
+        .input__dropdown
+            each el in params.dropdownElems
+                a.input__result(href="#")!= el
+

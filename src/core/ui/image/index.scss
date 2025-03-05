@@ -1,0 +1,42 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.image {
+  display: flex;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s ease;
+  }
+
+  picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.image._size_sm {
+  width: 296px;
+  height: 196px;
+}
+
+.image._size_md {
+  width: 296px;
+  height: 296px;
+}
+
+.image._size_l {
+  width: 296px;
+  height: 395px;
+}

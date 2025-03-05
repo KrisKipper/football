@@ -1,0 +1,173 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.footer {
+  background: config.$colors-white;
+
+  &__layout {
+    @include lib.flex-col;
+  }
+
+  &__container {
+    border-top: 1px solid config.$colors-cyan-100;
+  }
+
+  &__subscribe {
+    padding: 64px 0;
+    @include lib.flex-col;
+    gap: 16px;
+    width: 100%;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      padding: 32px 0;
+      @include lib.flex-row;
+    }
+  }
+
+  &__subscribe-form {
+    @include lib.flex-row;
+    gap: 16px;
+    width: 100%;
+    max-height: 48px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      @include lib.flex-col;
+      max-height: unset;
+    }
+  }
+
+  &__subscribe-text {
+    color: config.$colors-black-40;
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__content {
+    @include lib.flex-col;
+    width: 100%;
+    padding: 60px 0;
+    gap: 60px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      gap: 32px;
+      padding: 32px 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: min(119px, 5vw);
+
+    @media only screen and (max-width: config.$bp-md) {
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    @media only screen and (max-width: config.$bp-sm) {
+      gap: 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    width: calc(100vw - 244px - min(119px, 6.197vw));
+
+    @media only screen and (max-width: config.$bp-md) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: config.$bp-sm) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__links {
+    @include lib.flex-col;
+    gap: 10px;
+  }
+
+  &__links._mob-width_full {
+
+    @media only screen and (max-width: config.$bp-sm) {
+      width: 100%;
+    }
+  }
+
+  &__links-title {
+    color: config.$colors-black-100;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__links-title._margin_none {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: config.$colors-black-100;
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 16px;
+    transition: color .3s ease;
+
+    &:hover, &:active {
+      color: config.$colors-red;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 32px;
+    }
+  }
+
+  &__bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media only screen and (max-width: config.$bp-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__ps {
+    color: config.$colors-black-40;
+    font-family: config.$font-secondary;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.footer {
+  &__input {
+    .input__field {
+      padding: 14px 16px;
+      max-height: unset;
+
+      @media only screen and (max-width: config.$bp-sm) {
+        padding: 10px 12px;
+        max-height: 40px;
+      }
+    }
+  }
+}
