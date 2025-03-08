@@ -1,0 +1,17 @@
+section.s-hero#hero
+    +image({mix: "s-hero__bg", src: 'assets/media/hero-bg.png', alt: ""})
+    .s-hero__container
+        .s-hero__content
+            span.s-hero__subtitle Первое занятие бесплатно!
+            span.s-hero__left-subtitle CHILDREN'S FOOTBALL SCHOOL
+            h1.h1 FOOTBALL SKILLS
+            p.s-hero__announce
+                | объявляет набор
+                br
+                | мальчиков и девочек в возрасте 3+
+                br
+                | от 3 000 ₽/месяц
+            +buttonTypeDefault({text: "Записаться НА БЕСПЛАТНОЕ ЗАНЯТИЕ", mix: "_size_md s-hero__button"})
+        .s-hero__ball-container
+            +image({mix: "s-hero__ball", src: 'assets/media/ball.png', alt: "ball"})
+

@@ -18,6 +18,8 @@
 @use '../core/ui/slider';
 @use '../core/ui/table';
 
+@use '../sections/s-hero';
+
 @include lib.font("AlumniSans", 100, "alumni-sans-100");
 @include lib.font("AlumniSans", 200, "alumni-sans-200");
 @include lib.font("AlumniSans", 300, "alumni-sans-300");
@@ -36,6 +38,7 @@
   font-weight: config.$font-weight;
   font-size: 16px;
   text-decoration: none;
+  color: config.$colors-white;;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -49,20 +52,22 @@
     background-color: config.$colors-black;
   }
 
-  iframe {
-    max-width: 100%;
-  }
 
   a {
-    color: config.$colors-red;
+    color: config.$colors-white;
   }
 
   h1,.h1 {
     font-family: config.$font-primary;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: 0.02em;
+    color: config.$colors-black-50;
+    -webkit-text-stroke: 7px config.$colors-white;
+    text-stroke: 7px config.$colors-white;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 200px;
+    line-height: 150px;
+    letter-spacing: 4px;
+    text-align: center;
   }
 
   h2,.h2 {
@@ -183,30 +188,8 @@
   }
 }
 
-.main {
-  padding-top: 158px;
-
-  @media only screen and (max-width: config.$bp-md) {
-    padding-top: 69px;
-  }
-  @media only screen and (max-width: config.$bp-sm) {
-    padding-top: 92px;
-  }
-}
-
-._tab-hidden {
-
-  @media only screen and (max-width: config.$bp-md) {
-    display: none !important;
-  }
-}
-
-._tab-flex {
-  display: none;
-
-  @media only screen and (max-width: config.$bp-md) {
-    display: flex;
-  }
+.body {
+  background: config.$colors-bg;
 }
 
 a, button {

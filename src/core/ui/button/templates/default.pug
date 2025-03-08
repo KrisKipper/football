@@ -1,20 +1,6 @@
 mixin buttonTypeDefault(params)
     -
         const classes = params.mix ? `button ${params.mix}` : 'button';
-    if (params.add)
-      button(class= classes, type=params.type || 'button' )&attributes(attributes)
-        if(params.pin)
-            +icon({
-                mix: '_size_sm button__icon-pin',
-                id: params.pin
-            })
-        != params.text
-    else 
-      button(class= classes, type=params.type || 'button')&attributes(attributes)
-        if(params.pin)
-            +icon({
-                mix: '_size_sm button__icon-pin',
-                id: params.pin
-            })
-        != params.text
 
+    button(class= classes, type=params.type || 'button')&attributes(attributes)
+        != params.text

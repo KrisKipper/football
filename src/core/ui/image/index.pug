@@ -3,6 +3,5 @@ mixin image(params)
         const classes = params.mix ? `image ${params.mix}` : 'image';
 
 
-    div(class= classes)
-        img(src=params.src alt=params.alt || '')
-        block
+    img(src=params.src class= classes alt=params.alt || '')
+
