@@ -1,0 +1,27 @@
+section.section.s-progress#progress
+    .container
+        .section__content
+            h2.section__title НАШИ ДОСТИЖЕНИЯ
+            .section__top.s-progress__top
+                p.section__text.s-progress__text Со дня основания детской футбольной школы «FOOTBALL SKILLS» было создано несколько команд спортивного совершенствования! За это время команды достигли отличных достижений, выступая на соревнованиях различного уровня. Принимая участие в городских, областных и межрегиональных соревнованиях, команды «FOOTBALL SKILLS» неоднократно становились победителями и призёрами!
+                +image({mix: "s-progress__image", src: 'assets/media/progress.png', alt: "progress"})
+            .section__main.s-progress__years
+                each el in cardsYear
+                    +cardYear({
+                        num: el.num,
+                        text: el.text,
+                        year: el.year,
+                        progressList: el.progressList
+                    })
+            span.section__ps / 11 игроков, 1 сердцебиение! /
+            .swiper-container.s-progress__swiper-container
+                .swiper.s-progress__swiper
+                    .swiper-wrapper.s-progress__swiper-wrapper
+                        each val in Array.from({length: 27}, (_, i) => i + 1)
+                            .swiper-slide.s-progress__swiper-slide
+                                +image({mix: "s-progress__slide-image", src: `assets/media/s-progress-slider/${val}/${val}.png`, alt: "photo"})
+                .swiper-button-prev.s-progress__swiper-button
+                .swiper-button-next.s-progress__swiper-button
+                .swiper-pagination
+
+

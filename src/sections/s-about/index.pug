@@ -2,18 +2,20 @@ section.section.s-about#about
     .container
         .section__content
             h2.section__title О НАС
-            .section__top
-                p.section__text
+            .section__top.s-about__top
+                p.section__text.s-about__text
                     | FOOTBALL SKILLS — детская футбольная школа современного формата, основанная и активно развивающаяся  с июля 2014 года
                     br
                     br
                     | Профессиональная методика нашей детской футбольной школы направлена на физическое и психологическое развитие детей различных возрастных групп. Благодаря опытному тренерскому составу тренировочный процесс интересен и эффективен, что даёт ребёнку возможность обрести качественные навыки игры в футбол, всестороннее физическое развитие, а также развитие личностных качеств
                 +image({mix: "s-about__image", src: 'assets/media/boy.png', alt: "a boy with ball"})
-            section.section__main.s-about__content
+            .section__main.s-about__content
                 each el, index in aboutBenefits
                     .s-about__item-benefit
-                        .s-about__item-benefit-num!= `${index + 1}:0`
+                        .s-about__item-benefit-num-container
+                            .s-about__item-benefit-num!= `${index + 1}:0`
                         .s-about__item-benefit-text!= el
+            span.section__ps / БОЛЬШЕ, ЧЕМ ИГРА! /
 
 
 

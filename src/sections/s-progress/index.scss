@@ -1,0 +1,54 @@
+@use '../../core/config/scss/index' as config;
+@use '../../core/lib/scss/index' as lib;
+
+.s-progress {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 50%;
+    max-width: 714px;
+  }
+
+  &__image {
+    width: 44.39%;
+  }
+
+  &__years {
+    margin-top: 22px;
+  }
+
+  &__slide-image {
+    width: 100%;
+  }
+
+
+
+  &__swiper {
+    width: 109.7%;
+    overflow: visible;
+    max-width: 1580px;
+  }
+
+  &__swiper-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding-bottom: 68px;
+  }
+
+  .swiper-slide {
+    opacity: 0.1;
+    transition: opacity 0.3s;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+}

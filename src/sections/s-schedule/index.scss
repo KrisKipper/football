@@ -1,0 +1,91 @@
+@use '../../core/config/scss/index' as config;
+@use '../../core/lib/scss/index' as lib;
+
+.s-schedule {
+
+  &__top {
+    position: relative;
+    padding: 0;
+    margin-top: 36px;
+  }
+
+  &__text {
+    width: 47.5%;
+  }
+
+  &__image {
+    position: absolute;
+    top: -81px;
+    width: 43%;
+    right: 0;
+  }
+
+  &__swiper-container {
+    overflow: hidden;
+    background: config.$colors-bg;
+    margin-top: 44px;
+  }
+
+  &__swiper-thumbs {
+  }
+
+  &__swiper-thumbs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 76px);
+  }
+
+  &__swiper-thumbs-slide {
+    width: 100% !important;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+    border-top: 1px solid config.$colors-white-50;
+    border-bottom: 1px solid config.$colors-white-50;
+    cursor: pointer;
+  }
+
+  &__swiper-thumbs-num, &__swiper-thumbs-title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    white-space: nowrap;
+    color: config.$colors-white-50;
+  }
+
+  &__swiper-thumbs-slide.swiper-slide-thumb-active {
+    border-color: config.$colors-white;
+
+    .s-schedule__swiper-thumbs-title {
+      color: config.$colors-white;
+    }
+  }
+
+  &__swiper-thumbs-slide.disabled {
+
+    .s-schedule__swiper-thumbs-title, .s-schedule__swiper-thumbs-num {
+      color: config.$colors-white;
+      opacity: 0.1;
+      cursor: none !important;
+      pointer-events: none;
+    }
+  }
+
+  &__swiper {
+    margin: 60px 0;
+  }
+
+  &__ps {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__button {
+    margin: 48px auto 0;
+  }
+}

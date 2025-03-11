@@ -50,3 +50,4 @@
 //=require ../core/ui/header/index.js
 //=require ../core/ui/swiper/index.js
 //=require ../core/ui/input-dropdown/index.js
+//=require ../core/ui/card-year/index.js

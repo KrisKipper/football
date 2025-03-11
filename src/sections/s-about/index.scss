@@ -1,0 +1,114 @@
+@use '../../core/config/scss/index' as config;
+@use '../../core/lib/scss/index' as lib;
+
+.s-about {
+  margin-top: 12px;
+
+  &__top {
+    gap: 3.6%;
+    position: relative;
+  }
+
+  &__text {
+    width: 52.5%;
+  }
+
+  &__image {
+    width: 39.3%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 92px;
+    border-bottom: 1px solid config.$colors-white-50;
+    padding-bottom: 20px;
+  }
+
+  &__item-benefit-num-container {
+    position: relative;
+    width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transition: color .3s ease;
+      background: config.$colors-white-50;
+    }
+  }
+
+  &__item-benefit-num {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    transition: color .3s ease;
+    color: config.$colors-white-50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: config.$colors-bg;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item-benefit {
+    position: relative;
+    transform: translateY(-20px);
+
+    &:nth-child(odd) {
+      .s-about__item-benefit-num {
+        margin-left: 230px;
+      }
+    }
+
+    &:nth-child(even) {
+      .s-about__item-benefit-num {
+        margin-right: 230px;
+        margin-left: auto;
+      }
+    }
+
+    &:hover {
+      .s-about__item-benefit-num-container {
+
+        &:before {
+          background: config.$colors-white;
+        }
+      }
+
+      .s-about__item-benefit-num {
+        color: config.$colors-white;
+      }
+    }
+  }
+
+
+
+  &__item-benefit-text {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    text-align: center;
+    font-variant: small-caps;
+    position: absolute;
+    top: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+  }
+}
