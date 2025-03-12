@@ -878,6 +878,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       return;
     }
     var sliderProgress = element.querySelector('.s-progress__swiper') || element.closest('.s-progress__swiper');
+    var sliderTrainers = element.querySelector('.s-trainers__swiper') || element.closest('.s-trainers__swiper');
     var navNextBtn = element.querySelector('.swiper-button-next');
     var navPrevBtn = element.querySelector('.swiper-button-prev');
     var fractionPagination = element.querySelector('.swiper-pagination');
@@ -915,6 +916,20 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         type: "fraction"
       },
       loop: true,
+      navigation: {
+        nextEl: navNextBtn,
+        prevEl: navPrevBtn
+      }
+    });
+    var swiperTrainers = new Swiper(sliderTrainers, {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      pagination: {
+        el: fractionPagination,
+        type: "fraction"
+      },
+      loop: true,
+      autoHeight: true,
       navigation: {
         nextEl: navNextBtn,
         prevEl: navPrevBtn
@@ -982,6 +997,27 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
   };
   var onLoad = function onLoad() {
     document.querySelectorAll('.card-year').forEach(function (element) {
+      tabs(element);
+    });
+  };
+  document.addEventListener('DOMContentLoaded', onLoad);
+})();
+(function () {
+  var tabs = function tabs(element) {
+    if (!element) return;
+    var button = element.querySelector(".card-faq__button");
+    button.addEventListener('click', function () {
+      var isActive = element.classList.contains('active');
+      document.querySelectorAll('.card-faq').forEach(function (card) {
+        card.classList.remove('active');
+      });
+      if (!isActive) {
+        element.classList.add('active');
+      }
+    });
+  };
+  var onLoad = function onLoad() {
+    document.querySelectorAll('.card-faq').forEach(function (element) {
       tabs(element);
     });
   };

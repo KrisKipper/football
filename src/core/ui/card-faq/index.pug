@@ -1,0 +1,17 @@
+mixin cardFAQ(params)
+    -
+        const classes = params.mix ? `card-faq ${params.mix}` : 'card-faq';
+
+    div(class= classes)
+        .card-faq__header
+            .card-faq__title
+                span.card-faq__num!= `0${params.num} /`
+                span.card-faq__question!= params.question
+            button.card-faq__button
+                +icon({id: "plus", mix: "card-faq__plus"})
+                +icon({id: "minus", mix: "card-faq__minus"})
+        .card-faq__content
+            p.card-faq__answer!= `Ответ: ${params.answer}`
+
+
+

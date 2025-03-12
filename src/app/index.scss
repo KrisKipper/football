@@ -19,12 +19,20 @@
 @use '../core/ui/table';
 @use '../core/ui/card-year';
 @use '../core/ui/card-district';
+@use '../core/ui/card-trainer';
+@use '../core/ui/card-faq';
+
+
 
 
 @use '../sections/s-hero';
 @use '../sections/s-about';
 @use '../sections/s-progress';
 @use '../sections/s-schedule';
+@use '../sections/s-trainers';
+@use '../sections/s-faq';
+
+
 
 
 @include lib.font("AlumniSans", 100, "alumni-sans-100");

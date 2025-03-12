@@ -1,0 +1,9 @@
+@use '../../core/config/scss/index' as config;
+@use '../../core/lib/scss/index' as lib;
+
+.s-faq {
+
+  &__button {
+    margin: 48px auto 0;
+  }
+}

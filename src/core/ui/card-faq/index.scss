@@ -1,0 +1,112 @@
+@use '../../config/scss' as config;
+@use '../../lib/scss' as lib;
+
+.card-faq {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid config.$colors-white-50;
+  border-bottom: 1px solid config.$colors-white-50;
+  transition: border-color .3s ease;
+  padding-bottom: 22px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__num {
+    color: config.$colors-white-50;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0;
+    transition: color .3s ease;
+  }
+
+  &__question {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 3%;
+  }
+
+  &__plus {
+    opacity: 1;
+  }
+
+  &__minus {
+    display: none;
+    opacity: 0;
+  }
+
+  &__content {
+    opacity: 0;
+    height: 0;
+    transition: height .3s ease;
+    padding-left: 92px;
+  }
+
+  &__plus, &__minus {
+    color: config.$colors-white-70;
+    transition: .3s ease;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__answer {
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    padding-top: 24px;
+    padding-bottom: 2px;
+  }
+}
+
+.card-faq.active {
+  border-color: config.$colors-white;
+
+  .card-faq__content {
+    height: auto;
+    opacity: 1;
+  }
+
+  .card-faq__header {
+    overflow: visible;
+  }
+
+  .card-faq__minus, .card-faq__plus, .card-faq__num {
+    color: config.$colors-white;
+  }
+
+  .card-faq__plus {
+    display: none;
+    opacity: 0;
+  }
+
+  .card-faq__minus {
+    display: block;
+    opacity: 1;
+  }
+
+
+}
+
+.card-faq:hover {
+  border-color: config.$colors-white;
+
+  .card-faq__minus, .card-faq__plus, .card-faq__num {
+    color: config.$colors-white;
+    fill: config.$colors-white;
+  }
+}

@@ -1,0 +1,28 @@
+@use '../../core/config/scss/index' as config;
+@use '../../core/lib/scss/index' as lib;
+
+.s-trainers {
+
+  &__text {
+    width: 58%;
+    max-width: 802px;
+  }
+
+  &__image {
+    width: 35.83%;
+  }
+
+  &__top {
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  &__swiper-pagination {
+    position: absolute;
+    width: max-content;
+    top: 40px;
+    right: 63px;
+    left: auto;
+  }
+}

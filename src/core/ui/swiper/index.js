@@ -6,6 +6,7 @@
         }
 
         const sliderProgress = element.querySelector('.s-progress__swiper') || element.closest('.s-progress__swiper');
+        const sliderTrainers = element.querySelector('.s-trainers__swiper') || element.closest('.s-trainers__swiper');
         const navNextBtn = element.querySelector('.swiper-button-next');
         const navPrevBtn = element.querySelector('.swiper-button-prev');
         const fractionPagination = element.querySelector('.swiper-pagination');
@@ -50,6 +51,22 @@
                 type: "fraction",
             },
             loop: true,
+            navigation: {
+                nextEl: navNextBtn,
+                prevEl: navPrevBtn,
+            },
+        });
+
+
+        const swiperTrainers = new Swiper(sliderTrainers, {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            pagination: {
+                el: fractionPagination,
+                type: "fraction",
+            },
+            loop: true,
+            autoHeight: true,
             navigation: {
                 nextEl: navNextBtn,
                 prevEl: navPrevBtn,
