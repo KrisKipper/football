@@ -17,6 +17,7 @@
     padding: 22px 40px 0;
     position: relative;
     overflow: hidden;
+    gap: 20px;
   }
 
   &__title {
@@ -32,6 +33,7 @@
     line-height: 100%;
     letter-spacing: 0;
     transition: color .3s ease;
+    white-space: nowrap;
   }
 
   &__question {
@@ -70,6 +72,8 @@
     letter-spacing: 3%;
     padding-top: 24px;
     padding-bottom: 2px;
+    width: 931px;
+    max-width: 85%;
   }
 }
 
