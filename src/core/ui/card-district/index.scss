@@ -10,6 +10,10 @@
   gap: 40px;
   position: relative;
 
+  @media only screen and (max-width: config.$bp-tablet) {
+    gap: 8px;
+  }
+
   &__title {
     font-weight: 400;
     font-size: 40px;
@@ -17,6 +21,11 @@
     letter-spacing: 2%;
     text-align: center;
     font-variant: small-caps;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 24px;
+      letter-spacing: 0;
+    }
   }
 
   &__filials {
@@ -26,6 +35,10 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      gap: 12px;
+    }
   }
 
   &__filial {
@@ -37,11 +50,19 @@
     flex-direction: column;
     gap: 20px;
 
+    @media only screen and (max-width: config.$bp-tablet) {
+      gap: 12px;
+    }
+
     &:before, &:after {
       content: '';
       position: absolute;
       height: 302px;
       width: 128px;
+
+      @media only screen and (max-width: config.$bp-tablet) {
+        display: none;
+      }
     }
 
     &:before {
@@ -70,6 +91,10 @@
       letter-spacing: 3%;
       text-align: center;
       color: config.$colors-white-50;
+
+      @media only screen and (max-width: config.$bp-tablet) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -79,6 +104,11 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
 
   &__group {
@@ -93,11 +123,24 @@
     position: relative;
     z-index: 2;
     background: config.$colors-bg;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      padding: 12px;
+      align-items: center;
+      border-radius: 2px;
+      height: max-content;
+      width: calc(100vw - 40px);
+    }
   }
 
   &__icon {
     width: 34px;
     height: 34px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   &__group-name, &__schedule li {
@@ -110,12 +153,25 @@
 
   &__group-name {
     margin: 36px 0 16px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 20px;
+      letter-spacing: 0;
+      text-align: center;
+      margin: 12px 0 8px;
+    }
   }
 
   &__schedule {
 
     li {
       list-style-type: none;
+
+      @media only screen and (max-width: config.$bp-tablet) {
+        font-size: 16px;
+        letter-spacing: 0;
+        text-align: center;
+      }
     }
   }
 }

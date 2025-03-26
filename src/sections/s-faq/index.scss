@@ -3,7 +3,18 @@
 
 .s-faq {
 
+  &__content {
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin-top: 16px;
+    }
+  }
+
   &__button {
     margin: 48px auto 0;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin-top: 24px;
+      width: 100%;
+    }
   }
 }

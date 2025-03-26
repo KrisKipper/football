@@ -10,12 +10,47 @@
 
   &__image {
     width: 35.83%;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: 100%;
+    }
   }
 
   &__top {
     align-items: center;
     gap: 40px;
     justify-content: space-between;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      flex-direction: column-reverse;
+      gap: 16px;
+      padding-top: 8px;
+    }
+  }
+
+  &__swiper.active {
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      z-index: 800;
+      background: config.$colors-bg
+    }
+
+    //.swiper-button-prev, .swiper-button-next {
+    //  display: none;
+    //}
+  }
+
+  &__swiper-container {
+    margin-top: 40px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin-top: 12px;
+    }
   }
 
   &__swiper-pagination {
@@ -24,5 +59,9 @@
     top: 40px;
     right: 63px;
     left: auto;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      display: none;
+    }
   }
 }

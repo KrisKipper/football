@@ -13,7 +13,8 @@ section.section.s-about#about
                 each el, index in aboutBenefits
                     .s-about__item-benefit
                         .s-about__item-benefit-num-container
-                            .s-about__item-benefit-num!= `${index + 1}:0`
+                            .s-about__item-benefit-num
+                                span!= `${index + 1}:0`
                         .s-about__item-benefit-text!= el
             span.section__ps / БОЛЬШЕ, ЧЕМ ИГРА! /
 

@@ -841,30 +841,25 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 (function () {
   var component = function component(element) {
     if (!element) return;
-    var burgerButton = element.querySelector('.header__burger');
-    var closeButton = element.querySelector('.header__close-icon');
-    var menu = element.querySelector('.header__content');
-    var searchForm = element.querySelector('.input._type_search');
-    var addActiveClass = function addActiveClass() {
-      menu.classList.add('active');
-    };
-    var removeActiveClass = function removeActiveClass() {
-      menu.classList.remove('active');
-    };
+    var burgerButton = element.querySelector('.header__button');
+    var navItems = element.querySelectorAll('.header__nav-item');
     try {
-      if (burgerButton) burgerButton.addEventListener('click', addActiveClass);
-      if (closeButton) closeButton.addEventListener('click', removeActiveClass);
+      if (burgerButton) {
+        burgerButton.addEventListener('click', function () {
+          element.classList.toggle('_active');
+        });
+      }
+      navItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          if (window.innerWidth < 1025) {
+            element.classList.remove('_active');
+          }
+          window.location.href = item.dataset.href;
+        });
+      });
     } catch (e) {
       console.error("Error:", e.message);
     }
-    searchForm.addEventListener('click', function () {
-      menu.classList.add('open');
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.input__field-input')) {
-        menu.classList.remove('open');
-      }
-    });
   };
   var mount = function mount() {
     document.querySelectorAll('.header').forEach(component);
@@ -900,16 +895,15 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     });
     var swiperProgress = new Swiper(sliderProgress, {
       breakpoints: {
-        576: {
+        860: {
           spaceBetween: 20,
-          slidesPerView: 3
+          slidesPerView: 1
         },
-        1439: {
-          spaceBetween: 40,
+        861: {
+          spaceBetween: 20,
           slidesPerView: 3
         }
       },
-      slidesPerView: 3,
       centeredSlides: true,
       pagination: {
         el: fractionPagination,
@@ -1018,6 +1012,55 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
   };
   var onLoad = function onLoad() {
     document.querySelectorAll('.card-faq').forEach(function (element) {
+      tabs(element);
+    });
+  };
+  document.addEventListener('DOMContentLoaded', onLoad);
+})();
+(function () {
+  var tabs = function tabs(element) {
+    if (!element) return;
+    var openButton = element.querySelector(".card-trainer__button");
+    var closeButton = element.querySelector(".card-trainer__button-close");
+    var sliderTrainers = element.querySelector('.s-trainers__swiper') || element.closest('.s-trainers__swiper');
+    var isActive = element.classList.contains('active');
+    openButton.addEventListener('click', function () {
+      document.querySelectorAll('.card-trainer').forEach(function (card) {
+        if (!isActive) {
+          card.classList.add('active');
+        }
+      });
+      if (sliderTrainers) {
+        sliderTrainers.classList.add('active');
+      }
+    });
+    closeButton.addEventListener('click', function () {
+      element.classList.remove('active');
+      if (sliderTrainers) {
+        sliderTrainers.classList.remove('active');
+      }
+    });
+  };
+  var onLoad = function onLoad() {
+    document.querySelectorAll('.card-trainer').forEach(function (element) {
+      tabs(element);
+    });
+  };
+  document.addEventListener('DOMContentLoaded', onLoad);
+})();
+(function () {
+  var tabs = function tabs(element) {
+    if (!element) return;
+    var header = element.querySelector(".radio-accordion__header");
+    header.addEventListener('click', function () {
+      var isActive = element.classList.contains('active');
+      if (!isActive) {
+        element.classList.add('active');
+      }
+    });
+  };
+  var onLoad = function onLoad() {
+    document.querySelectorAll('.radio-accordion').forEach(function (element) {
       tabs(element);
     });
   };

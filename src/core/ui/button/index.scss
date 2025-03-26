@@ -3,20 +3,29 @@
 
 .button {
   background: config.$colors-green;
-  color: config.$colors-black;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 88px;
   cursor: pointer;
   transition: .3s ease;
-  text-align: center;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 33px;
   border-radius: 8px;
   position: relative;
-  text-transform: uppercase;
+  gap: 3px;
+
+  & > span {
+    display: inline-flex;
+    gap: 4px;
+  }
+
+  & > span, * {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: config.$colors-black;
+  }
 
   &:before, &:after {
     content: '';
@@ -46,21 +55,57 @@
     opacity: 1;
   }
 
-
-  @media only screen and (max-width: config.$bp-sm) {
-
-  }
 }
 
 .button:disabled, .button._disabled {
-  color: config.$colors-black-20;
+
   background: config.$colors-green-60;
   pointer-events: none;
   cursor: not-allowed;
+
+  & > span,  * {
+    color: config.$colors-black-20;
+  }
 }
 
 .button._size_md {
   padding: 10px 64px;
-  font-size: 32px;
-  line-height: 38px;
+
+  @media only screen and (max-width: config.$bp-tablet) {
+    padding: 6px 88px;
+  }
+
+
+  & > span,  * {
+    font-size: 32px;
+    line-height: 38px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 1%;
+    }
+  }
+}
+
+.button._size_sm {
+  padding: 6px;
+
+  & > span,  * {
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.button._theme_transparent {
+  background: transparent;
+  border: 1px solid config.$colors-white;
+  border-radius: 4px;
+
+  & > span,  * {
+    color: config.$colors-white;
+  }
 }

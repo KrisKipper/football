@@ -1,12 +1,21 @@
 @use '../../config/scss' as config;
 @use '../../lib/scss' as lib;
 
-.checkbox {
+.radio-group {
   display: flex;
-  align-items: center;
-  cursor: pointer;
-  min-width: 30%;
-  justify-content: space-around;
+  gap: 12px;
+
+  @media only screen and (max-width: config.$bp-tablet) {
+    gap: 8px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    min-width: 30%;
+    justify-content: space-between;
+  }
 
   &__input {
     position: absolute;
@@ -14,7 +23,7 @@
     width: 0;
     height: 0;
 
-    &:checked + .checkbox__label .checkbox__custom-checkbox {
+    &:checked + .radio-group__label .radio-group__custom-radio {
       border-color: config.$colors-green;
 
       &::after {
@@ -22,7 +31,7 @@
       }
     }
 
-    &:focus + .checkbox__label .checkbox__custom-checkbox {
+    &:focus + .radio-group__label .radio-group__custom-radio {
       box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.3);
     }
   }
@@ -32,21 +41,15 @@
     align-items: center;
     gap: 12px;
     user-select: none;
-    cursor: pointer;
-
-    @media only screen and (max-width: config.$bp-tablet) {
-      gap: 8px;
-    }
   }
 
-  &__custom-checkbox {
+  &__custom-radio {
     position: relative;
     width: 18px;
     height: 18px;
     border: 1px solid config.$colors-white;
     border-radius: 2px;
     transition: all 0.2s;
-    flex-shrink: 0;
 
     @media only screen and (max-width: config.$bp-tablet) {
       width: 14px;
@@ -63,6 +66,17 @@
       background-image: url('data:image/svg+xml,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 0V8" stroke="%234FF94B"/><path d="M0 4L8 4" stroke="%234FF94B"/></svg>');
       transform: scale(0);
       transition: transform 0.2s;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: config.$colors-white;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 14px;
     }
   }
 }

@@ -3,4 +3,5 @@ mixin buttonTypeDefault(params)
         const classes = params.mix ? `button ${params.mix}` : 'button';
 
     button(class= classes, type=params.type || 'button')&attributes(attributes)
-        != params.text
+        span!= params.text
+            span._mob_hidden!= params.mobHiddenText

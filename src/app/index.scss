@@ -21,7 +21,9 @@
 @use '../core/ui/card-district';
 @use '../core/ui/card-trainer';
 @use '../core/ui/card-faq';
-
+@use '../core/ui/radio-group';
+@use '../core/ui/form';
+@use '../core/ui/radio-accordion';
 
 
 
@@ -31,7 +33,7 @@
 @use '../sections/s-schedule';
 @use '../sections/s-trainers';
 @use '../sections/s-faq';
-
+@use '../sections/s-news';
 
 
 
@@ -56,11 +58,11 @@
   color: config.$colors-white;
 
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 0;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: config.$colors-white;
+    background-color: config.$colors-bg;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -70,19 +72,6 @@
 
   a {
     color: config.$colors-white;
-  }
-
-  h1,.h1 {
-    font-family: config.$font-primary;
-    color: config.$colors-black-50;
-    -webkit-text-stroke: 7px config.$colors-white;
-    text-stroke: 7px config.$colors-white;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 200px;
-    line-height: 150px;
-    letter-spacing: 4px;
-    text-align: center;
   }
 }
 
@@ -157,3 +146,44 @@ html {
     justify-content: flex-start;
   }
 }
+
+._mob_block {
+  display: none;
+
+  @media only screen and (max-width: config.$bp-tablet) {
+    display: block;
+  }
+}
+
+._mob_flex {
+  display: none;
+
+  @media only screen and (max-width: config.$bp-tablet) {
+    display: flex;
+  }
+}
+
+._mob_hidden {
+
+  @media only screen and (max-width: config.$bp-tablet) {
+    display: none;
+  }
+}
+
+._flex-wrap {
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: config.$bp-tablet) {
+    column-gap: 26px !important;
+    row-gap: 0 !important;
+  }
+}
+
+._tablet_block{
+  display: none;
+
+  @media only screen and (max-width: config.$bp-md) {
+    display: block;
+  }
+}
+

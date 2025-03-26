@@ -6,7 +6,7 @@ section.section.s-faq#faq
                 each el, index in faq
                     +cardFAQ({num: index + 1, question: el.question, answer: el.answer})
             span.section__ps / Давай, ударь и никогда не сдавайся! /
-            +buttonTypeDefault({text: "Записаться НА БЕСПЛАТНОЕ ЗАНЯТИЕ", mix: "_size_md s-faq__button"})
+            +buttonTypeDefault({text: "Записаться", mobHiddenText: "НА БЕСПЛАТНОЕ ЗАНЯТИЕ",  mix: "_size_md s-faq__button"})(data-bs-toggle='modal' data-bs-target='#form')
 
 
 

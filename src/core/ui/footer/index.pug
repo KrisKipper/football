@@ -13,28 +13,31 @@ footer.footer
                                 })
                     a(href="mailto:89089498839a@gmail.com").footer__link-social 89089498839a@gmail.com
 
+                .footer__partners
+                    a(href="/news.html").footer__link-news Новости
+                    h4.footer__subtitle НАШИ ПАРТНёРЫ:
+                    .row-flex._gap_xxs._flex-wrap
+                        each val in partners
+                            a(href=val.link).footer__partner-link
+                                +icon({
+                                    id: val.icon
+                                })
+
                 .footer__eq
                     .footer__eq-content
                         +image({mix: "footer__back", src: `assets/media/set.png`, alt: ""})
-                        h4.footer__subtitle ЗАКАЗ ЭКИПИРОВКИ:
+                        h4.footer__subtitle._mob_hidden ЗАКАЗ ЭКИПИРОВКИ:
+                        a(href="https://wa.me/79039464875" target="_blank")._mob_flex ЗАКАЗ ЭКИПИРОВКИ
                         +image({mix: "footer__logo", src: `assets/media/logoA.png`, alt: "logo"})
-                        a(href="https://wa.me/79039464875" target="_blank") ОФОРМИТЬ заказ
+                        a(href="https://wa.me/79039464875" target="_blank")._mob_hidden ОФОРМИТЬ заказ
 
-                .footer__partners
-                    a(href="").footer__link-news Новости
-                    h4.footer__subtitle НАШИ ПАРТНёРЫ:
-                    .row-flex._gap_xxs
-                        each val in Array.from({length: 8}, (_, i) => i + 1)
-                            +icon({
-                                mix: '_size_xl',
-                                id: `p${val}`
-                            })
+                a(href="").footer__politic Политика конфиденциальности
 
                 .footer__authors
                     //a(href="mailto: oleg.matjushev@rambler.ru").footer__author-ol oleg.matjushev@rambler.ru
                     a(href="https://t.me/tatyanaartyukhina").footer__author-t web-designer: artyukhina tatyana
 
-                a(href="").footer__politic Политика конфиденциальности
+
 
 
 

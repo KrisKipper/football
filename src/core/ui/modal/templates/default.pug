@@ -9,7 +9,8 @@ mixin modalTypeDefault(params)
                     if(params.title)
                         span.modal-title!= params.title
                     button.modal-close-btn(data-bs-dismiss="modal")
-                        +icon({mix: '_size_sm', id: 'cross'})
-                block
+                        +icon({mix: '_size_sm', id: 'plus'})
+                .modal-inner
+                    block
 
 

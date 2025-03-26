@@ -9,6 +9,14 @@
   border-top: 1px solid config.$colors-white-50;
   border-bottom: 1px solid config.$colors-white-50;
 
+  @media only screen and (max-width: config.$bp-tablet) {
+    padding: 12px 32px;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+    align-items: center;
+  }
+
   &__image-container {
     background: config.$colors-white-50;
     border-radius: 3px;
@@ -16,6 +24,12 @@
     width: 311px;
     height: 364px;
     flex-shrink: 0;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: calc(100% - 40px);
+      height: auto;
+      border-radius: 2px;
+    }
   }
 
   &__image {
@@ -34,12 +48,45 @@
     line-height: 100%;
     letter-spacing: 1%;
     margin-bottom: 4px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 24px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+  }
+
+  &__item-title {
+    white-space: nowrap;
   }
 
   &__item-value, &__item-title {
     font-size: 24px;
     line-height: 100%;
     letter-spacing: 1%;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+
+  &__item-value._view-mob_center {
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      text-align: center;
+    }
+  }
+
+  &__item-wrapper._view-mob_flex {
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__info {
@@ -47,10 +94,18 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: 100%;
+      margin-top: 16px;
+      gap: 8px;
+      display: none;
+    }
   }
 
   &__item-value {
     font-weight: 200;
+    color: config.$colors-white-70;
   }
 
   &__item-title {
@@ -65,6 +120,34 @@
     }
   }
 
+  &__button {
+    margin-top: 20px;
+  }
 
 
+  &__button-close {
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    margin: 0 0 0 auto;
+    display: none;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      display: none;
+    }
+  }
+}
+
+.card-trainer.active {
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .card-trainer__button {
+    display: none;
+  }
+
+  .card-trainer__info, .card-trainer__button-close {
+    display: flex;
+  }
 }

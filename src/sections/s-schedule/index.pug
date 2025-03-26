@@ -35,8 +35,9 @@ section.section.s-schedule#schedule
 
 
 
-            span.section__ps.s-schedule__ps / То, что ты делаешь до начала сезона, делает чемпиона! /
-            +buttonTypeDefault({text: "Записаться НА БЕСПЛАТНОЕ ЗАНЯТИЕ", mix: "_size_md s-schedule__button"})
+            span.section__ps.s-schedule__ps._mob_hidden / То, что ты делаешь до начала сезона, делает чемпиона! /
+            span.section__ps._mob_flex / БУДУЩЕЕ СЕЙЧАС! /
+            +buttonTypeDefault({text: "Записаться ", mobHiddenText: "НА БЕСПЛАТНОЕ ЗАНЯТИЕ", mix: "_size_md s-schedule__button"})(data-bs-toggle='modal' data-bs-target='#form')
 
 
 

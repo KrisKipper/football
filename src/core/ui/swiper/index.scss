@@ -32,8 +32,10 @@
     z-index: 400;
     top: calc(50% - 30px) !important;
 
-    @media only screen and (max-width: config.$bp-sm) {
-
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: 25px;
+      height: 28px;
+      top: calc(50% - 14px) !important;
     }
 
     &:after {
@@ -56,32 +58,17 @@
   &-button-prev {
     left: 0;
 
-    //@media only screen and (max-width: config.$bp-sm) {
-    //  left: -16px;
-    //}
-
     &:before {
       background-image: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.3223 47.6777L14.0589 31.4142C13.2778 30.6332 13.2778 29.3668 14.0589 28.5858L30.3223 12.3223" stroke="white"/></svg>');
 
-      @media only screen and (max-width: config.$bp-sm) {
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.63731 10.5958C2.34307 10.2525 2.34307 9.74595 2.63731 9.40266L7.63731 3.56933C7.96678 3.18495 8.54547 3.14044 8.92985 3.4699C9.31423 3.79938 9.35875 4.37807 9.02928 4.76245L5.32633 9.08256L16.6666 9.08256C17.1729 9.08256 17.5833 9.49296 17.5833 9.99922C17.5833 10.5055 17.1729 10.9159 16.6666 10.9159L5.32633 10.9159L9.02928 15.236C9.35875 15.6204 9.31423 16.1991 8.92985 16.5285C8.54547 16.858 7.96678 16.8135 7.63731 16.4291L2.63731 10.5958Z" fill="white"/></svg>');
-      }
     }
   }
 
   &-button-next {
     right: 0;
 
-    //@media only screen and (max-width: config.$bp-sm) {
-    //  right: -16px;
-    //}
-
     &:before {
       background-image: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29.6777 47.6777L45.9411 31.4142C46.7222 30.6332 46.7222 29.3668 45.9411 28.5858L29.6777 12.3223" stroke="white"/></svg>');
-
-      @media only screen and (max-width: config.$bp-sm) {
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.3627 9.40422C17.6569 9.7475 17.6569 10.2541 17.3627 10.5973L12.3627 16.4307C12.0332 16.8151 11.4545 16.8596 11.0701 16.5301C10.6858 16.2006 10.6413 15.6219 10.9707 15.2376L14.6737 10.9174L3.33338 10.9174C2.82712 10.9174 2.41671 10.507 2.41671 10.0008C2.41671 9.49452 2.82712 9.08411 3.33338 9.08411L14.6737 9.08411L10.9707 4.764C10.6413 4.37962 10.6858 3.80093 11.0701 3.47146C11.4545 3.14199 12.0332 3.18651 12.3627 3.57089L17.3627 9.40422Z" fill="white"/></svg>');
-      }
     }
   }
 
@@ -96,48 +83,13 @@
     letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 16px;
+    }
   }
 
   &-pagination-total {
     opacity: .5;
-  }
-}
-
-.swiper._over-visible {
-  //overflow: visible;
-  //
-  //.swiper-wrapper {
-  //  overflow: hidden;
-  //}
-}
-
-.swiper--stories {
-  height: fit-content;
-
-  &-button {
-    position: absolute;
-    top: calc(50% - 20px);
-    cursor: pointer;
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: config.$colors-black-100;
-    border-radius: 50%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20.8352 11.8949C21.1882 12.3068 21.1882 12.9147 20.8352 13.3266L14.8352 20.3266C14.4398 20.7879 13.7454 20.8413 13.2841 20.4459C12.8228 20.0506 12.7694 19.3562 13.1648 18.8949L17.6083 13.7108L3.99997 13.7108C3.39246 13.7108 2.89997 13.2183 2.89997 12.6108C2.89997 12.0032 3.39246 11.5108 3.99997 11.5108L17.6083 11.5108L13.1648 6.32663C12.7694 5.86537 12.8228 5.17094 13.2841 4.77558C13.7454 4.38022 14.4398 4.43363 14.8352 4.89489L20.8352 11.8949Z' fill='white'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 400;
-
-    &.swiper-button-disabled {
-      display: none;
-    }
-
-    &-prev {
-      left: 0;
-      transform: rotate(180deg);
-    }
-    &-next {
-      right: 0;
-    }
   }
 }

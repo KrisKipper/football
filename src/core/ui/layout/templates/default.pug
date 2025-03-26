@@ -1,6 +1,8 @@
 //- variables
 block variables
   include ../../../config/pug/vars
+  block addVar
+
 
 //- mixins
 include ../../input/index
@@ -16,11 +18,7 @@ include ../../card-year/index
 include ../../card-district/index
 include ../../card-trainer/index
 include ../../card-faq/index
-
-
-
-
-block variables
+include ../../radio-group/index
 
 html(lang="ru")
   meta(charset="utf-8")
@@ -45,7 +43,9 @@ html(lang="ru")
     main.main
       block workarea
 
-    include ../../footer/index
+
+    if footer
+      include ../../footer/index
 
 
     script(src="vendors/jquery/jquery-3.6.0.min.js")

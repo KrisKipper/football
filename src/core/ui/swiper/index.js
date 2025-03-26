@@ -35,16 +35,15 @@
 
         const swiperProgress = new Swiper(sliderProgress, {
             breakpoints: {
-                576: {
+                860: {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                },
+                861: {
                     spaceBetween: 20,
                     slidesPerView: 3,
                 },
-                1439: {
-                    spaceBetween: 40,
-                    slidesPerView: 3,
-                },
             },
-            slidesPerView: 3,
             centeredSlides: true,
             pagination: {
                 el: fractionPagination,

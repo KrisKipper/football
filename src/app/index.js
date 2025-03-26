@@ -33,7 +33,7 @@
         addComponent(name, component) {
             this.components[name] = component;
         },
-      
+
         getComponent(name) {
             return this.components[name];
         },
@@ -52,4 +52,8 @@
 //=require ../core/ui/input-dropdown/index.js
 //=require ../core/ui/card-year/index.js
 //=require ../core/ui/card-faq/index.js
+//=require ../core/ui/card-trainer/index.js
+//=require ../core/ui/radio-accordion/index.js
+
+
 

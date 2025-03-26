@@ -6,5 +6,7 @@ mixin checkboxTypeDefault(params)
         delete inputAttributes.label;
 
     div(class= classes)
-        input(type="checkbox" name= params.name id= params.id value= params.name)&attributes(inputAttributes)
-        label(for= params.id)!= params.label
+        input(type="checkbox" name= params.name id= params.id value= params.name)&attributes(inputAttributes).checkbox__input
+        label(for= params.id).checkbox__label
+            span.checkbox__custom-checkbox
+            block

@@ -16,6 +16,10 @@
     padding: 24px 40px;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      padding: 17px 12px 6px;
+    }
   }
 
   &__num {
@@ -25,6 +29,10 @@
     line-height: 100%;
     letter-spacing: 0;
     transition: color .3s ease;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 13px;
+    }
   }
 
   &__year {
@@ -41,6 +49,11 @@
     justify-content: center;
     top: 8px;
     left:0;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 43px;
+      top: 12px;
+    }
   }
 
   &__plus {
@@ -50,6 +63,14 @@
   &__minus {
     display: none;
     opacity: 0;
+  }
+
+  &__plus, &__minus {
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: 12px;
+      height: 12px;
+    }
+
   }
 
   &__content {
@@ -68,6 +89,13 @@
     align-items: flex-start;
     gap: min(30px, 2.27%);
     margin-top: 40px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin-top: 16px;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
   }
 
   &__text {
@@ -78,6 +106,12 @@
     letter-spacing: 0;
     color: config.$colors-white-50;
     width: min(409px, 31%);
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      font-size: 16px;
+      text-align: center;
+      width: calc(100% - 26px);
+    }
   }
 
   &__image {
@@ -87,8 +121,17 @@
     position: relative;
     z-index: 3;
 
+    @media only screen and (max-width: config.$bp-tablet) {
+      width: 100%;
+      margin: 0;
+    }
+
     &:hover {
       transform: scale(2);
+
+      @media only screen and (max-width: config.$bp-tablet) {
+        transform: none;
+      }
     }
   }
 
@@ -111,12 +154,23 @@
     padding: 10px 10px 30px;
     margin-top: 12px;
 
+    @media only screen and (max-width: config.$bp-tablet) {
+      padding: 0 8px 18px;
+      margin-top: 18px;
+    }
+
     li {
       list-style-type: none;
       font-weight: 400;
       font-size: 24px;
       line-height: 100%;
       letter-spacing: 0;
+
+      @media only screen and (max-width: config.$bp-tablet) {
+        font-size: 16px;
+        text-align: center;
+        color: config.$colors-white-50;
+      }
     }
   }
 }
