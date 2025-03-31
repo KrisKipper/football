@@ -1,7 +1,0 @@
-mixin icon(params)
-    -
-        const classes = params.mix ? `icon ${params.mix}` : 'icon';
-
-
-    svg(class= classes)
-        use(xlink:href=`assets/icons/default/sprite.svg#${params.id}`)
