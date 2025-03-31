@@ -17,7 +17,13 @@
                     if (window.innerWidth < 1025) {
                         element.classList.remove('_active');
                     }
-                    window.location.href = item.dataset.href;
+
+                    const href = item.dataset.href || '';
+
+                    const hashIndex = href.indexOf('#');
+                    const anchor = hashIndex !== -1 ? href.substring(hashIndex) : '';
+
+                    window.location.href = `index.html${anchor}`;
                 });
             });
 
