@@ -5,7 +5,9 @@ mixin header()
                 a(href="tel:79089498839").header__phone +7 (908) 949-88-39
                 span.header__city г. КЕМЕРОВО
             +image({mix: 'header__logo',  src: 'assets/media/LOGO.png'})
-            +buttonTypeDefault({text: "Записаться", mix: "header__button-desktop"})(data-bs-toggle='modal' data-bs-target='#form')
+            .header__contacts
+                a.header__link._mob_hidden(href="news.html") НОВОСТИ
+                +buttonTypeDefault({text: "Записаться", mix: "header__button-desktop"})(data-bs-toggle='modal' data-bs-target='#form')
         button.header__button._tablet_block
             +icon({id: "plusBold", mix: "header__icon-button"})
         nav.header__nav
@@ -14,6 +16,7 @@ mixin header()
             button.header__nav-item(data-href='#schedule') РАСПИСАНИЕ ТРЕНИРОВОК
             button.header__nav-item(data-href='#trainers') ТРЕНЕРСКИЙ СОСТАВ
             button.header__nav-item(data-href='#faq') F. A. Q.
+            a.header__link._tablet_block(href="news.html") НОВОСТИ
         .header__contacts._mob
             a(href="tel:79089498839").header__phone +7 (908) 949-88-39
             span.header__city г. КЕМЕРОВО

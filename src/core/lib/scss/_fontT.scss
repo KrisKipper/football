@@ -1,0 +1,10 @@
+@mixin fontT($name, $weight, $fileName) {
+  @font-face {
+    font-family: "#{$name}-italic";
+    src: local("#{$name}"),
+    url("../assets/fonts/#{$name}/#{$fileName}.ttf") format("ttf");
+    font-weight: $weight;
+    font-style: italic;
+    font-display: swap;
+  }
+}

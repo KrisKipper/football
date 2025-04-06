@@ -47,16 +47,18 @@
     text-align: right;
     color: config.$colors-white;
     display: flex;
-    width: 100%;
+    width: max-content;
     justify-content: flex-end;
     position: relative;
     text-transform: uppercase;
+    margin: 0 0 0 auto;
 
     @media only screen and (max-width: config.$bp-tablet) {
       font-size: 32px;
       letter-spacing: -2%;
       text-align: left;
       justify-content: flex-start;
+      margin: 0;
     }
 
     &:after {
@@ -69,6 +71,24 @@
 
       @media only screen and (max-width: config.$bp-tablet) {
         height: 7px;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 400px);
+      height: 1px;
+      background: linear-gradient(90deg, #1E1D1D 30%, #000000 75.5%, #1E1D1D 100%);
+      bottom: 22px;
+      right: -60px;
+
+      @media only screen and (max-width: config.$bp-tablet) {
+        bottom: 7px;
+        right: auto;
+        left: -20px;
+        width: calc(100% + 90px);
+        background: linear-gradient(90deg, #1E1D1D 0%, #000000 30%, #1E1D1D 80%);
       }
     }
   }

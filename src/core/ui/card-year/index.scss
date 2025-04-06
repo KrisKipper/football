@@ -85,7 +85,7 @@
   &__content-top {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     gap: min(30px, 2.27%);
     margin-top: 40px;
@@ -105,7 +105,7 @@
     line-height: 100%;
     letter-spacing: 0;
     color: config.$colors-white-50;
-    width: min(409px, 31%);
+    width: min(418px, 33%);
 
     @media only screen and (max-width: config.$bp-tablet) {
       font-size: 16px;
@@ -120,6 +120,7 @@
     transition: .3s ease-in;
     position: relative;
     z-index: 3;
+    transform-origin: top center;
 
     @media only screen and (max-width: config.$bp-tablet) {
       width: 100%;

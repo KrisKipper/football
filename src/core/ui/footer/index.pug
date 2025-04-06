@@ -16,11 +16,16 @@ footer.footer
                 .footer__partners
                     a(href="/news.html").footer__link-news Новости
                     h4.footer__subtitle НАШИ ПАРТНёРЫ:
-                    .row-flex._gap_xxs._flex-wrap
+                    .row-flex._gap_xxs._mob-flex-wrap
                         each val in partners
                             a(href=val.link).footer__partner-link
                                 +icon({
-                                    id: val.icon
+                                    id: val.icon,
+                                    mix: "footer__partner-link-icon"
+                                })
+                                +icon({
+                                    id: `${val.icon}h`,
+                                    mix: "footer__partner-link-icon _hovered"
                                 })
 
                 .footer__eq
@@ -31,11 +36,11 @@ footer.footer
                         +image({mix: "footer__logo", src: `assets/media/logoA.png`, alt: "logo"})
                         a(href="https://wa.me/79039464875" target="_blank")._mob_hidden ОФОРМИТЬ заказ
 
-                a(href="").footer__politic Политика конфиденциальности
+                a(href="politic.html").footer__politic Политика конфиденциальности
 
                 .footer__authors
                     //a(href="mailto: oleg.matjushev@rambler.ru").footer__author-ol oleg.matjushev@rambler.ru
-                    a(href="https://t.me/tatyanaartyukhina").footer__author-t web-designer: artyukhina tatyana
+                    a(href="https://t.me/tatyanaartyukhina").footer__author-t WEB DESIGNER: artyukhina tatyana
 
 
 

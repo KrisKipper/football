@@ -103,7 +103,7 @@
     }
   }
 
-  &__swiper-thumbs-slide.swiper-slide-thumb-active {
+  &__swiper-thumbs-slide.swiper-slide-thumb-active,  &__swiper-thumbs-slide:hover {
     border-color: config.$colors-white;
 
     .s-schedule__swiper-thumbs-title {
@@ -111,13 +111,16 @@
     }
   }
 
-  &__swiper-thumbs-slide.disabled {
+  &__swiper-thumbs-slide.disabled, &__swiper-thumbs-slide.disabled:hover {
+    border-top: 1px solid config.$colors-white-50;
+    border-bottom: 1px solid config.$colors-white-50;
 
     .s-schedule__swiper-thumbs-title, .s-schedule__swiper-thumbs-num {
       color: config.$colors-white;
       opacity: 0.1;
       cursor: none !important;
       pointer-events: none;
+
     }
   }
 

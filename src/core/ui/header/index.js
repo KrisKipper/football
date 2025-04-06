@@ -2,6 +2,12 @@
     const component = (element) => {
         if (!element) return;
 
+        document.querySelectorAll('a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+
         const burgerButton = element.querySelector('.header__button');
         const navItems = element.querySelectorAll('.header__nav-item');
 

@@ -4,18 +4,18 @@
 
 @keyframes bounce{
   0%{
-    transform: scale(1)  translate(0, 0);
+    transform: scale(1)  translate(0, 0) rotate(0);
   }
-  70%{
-    transform: scale(1.0, 1.09)  translate(30px, 700px) rotate(-120deg);
+  57%{
+    transform: scale(1.0, 1.09)  translate(30px, 532px) rotate(110deg);
   }
 
   85%{
-    transform: scale(1.09, 1.0)  translate(100px, 600px) rotate(-150deg);
+    transform: scale(1.09, 1.0)  translate(100px, 400px) rotate(90deg);
   }
 
   100%{
-    transform: scale(1)  translate(150px, 700px) rotate(-160deg);
+    transform: scale(1)  translate(150px, 520px) rotate(0);
   }
 }
 
@@ -24,7 +24,6 @@
   align-items: center;
   flex-direction: column;
   padding: 0 0 139px;
-  min-height: 1082px;
   position: relative;
   width: 100vw;
 
@@ -60,18 +59,23 @@
     align-items: center;
   }
 
+  &__title-img, &__title-img_mob {
+    max-width: 100%;
+  }
+
   &__content {
-    padding-top: 261px;
+    padding-top: 92px;
     position: relative;
-    max-width: 1235px;
+    max-width: min(1235px, calc(100vw - 204px));
     z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media only screen and (max-width: config.$bp-tablet) {
-      padding: 132px 20px 0;
-      width: 100%;
+      padding: 40px 20px 0;
+      width: 100vw;
+      max-width: 100%;
     }
   }
 
@@ -82,6 +86,7 @@
     letter-spacing: 0;
     color: config.$colors-green;
     margin-bottom: 60px;
+    text-transform: uppercase;
 
     @media only screen and (max-width: config.$bp-tablet) {
       font-size: 24px;
@@ -99,6 +104,7 @@
     letter-spacing: 0;
     padding-left: 10px;
     margin: 0 auto 20px 0;
+    white-space: nowrap;
 
     @media only screen and (max-width: config.$bp-tablet) {
       font-size: 16px;
@@ -150,13 +156,8 @@
     left: 0;
     top: 0;
 
-    @media only screen and (max-width: config.$bp-tablet) {
-      position: absolute;
-      height: 56px;
-      width: 56px;
-      left: 0;
-      bottom: 0;
-      margin-top: 63px;
+    @media only screen and (max-width: config.$bp-lg) {
+      display: none;
     }
   }
 
@@ -167,6 +168,7 @@
     text-align: center;
     max-width: 611px;
     margin-top: 48px;
+    text-transform: uppercase;
 
     @media only screen and (max-width: config.$bp-tablet) {
       font-weight: 500;
@@ -193,7 +195,7 @@
     width: 260px;
     height: 260px;
     z-index: 10;
-    animation: bounce 1.6s linear forwards;
+    animation: bounce 1.2s linear forwards;
   }
 
   &__button {

@@ -13,6 +13,7 @@ mixin cardYear(params)
             .card-year__content-top
                 p.card-year__text!= params.text
                 +image({mix: "card-year__image", src: `assets/media/card-year-${params.num}.png`, alt: "photo"})
+                p.card-year__text._mob_hidden
             ul.card-year__progress-list
                 each el in params.progressList
                     li!= `/${el}`

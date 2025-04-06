@@ -16,7 +16,9 @@
     <header class="header">
       <div class="header__top">
         <div class="header__contacts _mob_hidden"><a class="header__phone" href="tel:79089498839">+7 (908) 949-88-39</a><span class="header__city">г. КЕМЕРОВО</span></div><img class="image header__logo" src="assets/media/LOGO.png" alt=""/>
-        <button class="button header__button-desktop" type="button" data-bs-toggle="modal" data-bs-target="#form"><span>Записаться<span class="_mob_hidden"></span></span></button>
+        <div class="header__contacts"><a class="header__link _mob_hidden" href="news.html">НОВОСТИ</a>
+          <button class="button header__button-desktop" type="button" data-bs-toggle="modal" data-bs-target="#form"><span>Записаться<span class="_mob_hidden"></span></span></button>
+        </div>
       </div>
       <button class="header__button _tablet_block">
         <svg class="icon header__icon-button">
@@ -28,7 +30,7 @@
         <button class="header__nav-item" data-href="#progress">Наши достижения</button>
         <button class="header__nav-item" data-href="#schedule">РАСПИСАНИЕ ТРЕНИРОВОК</button>
         <button class="header__nav-item" data-href="#trainers">ТРЕНЕРСКИЙ СОСТАВ</button>
-        <button class="header__nav-item" data-href="#faq">F. A. Q.</button>
+        <button class="header__nav-item" data-href="#faq">F. A. Q.</button><a class="header__link _tablet_block" href="news.html">НОВОСТИ</a>
       </nav>
       <div class="header__contacts _mob"><a class="header__phone" href="tel:79089498839">+7 (908) 949-88-39</a><span class="header__city">г. КЕМЕРОВО</span></div>
     </header>
@@ -36,7 +38,7 @@
       <section class="s-hero" id="hero"><img class="image s-hero__bg" src="assets/media/hero-bg.png" alt=""/>
         <div class="s-hero__container">
           <div class="s-hero__content"><span class="s-hero__subtitle">Первое занятие бесплатно!</span><span class="s-hero__left-subtitle">CHILDREN'S FOOTBALL SCHOOL</span>
-            <h1 class="h1">FOOTBALL SKILLS<img class="image s-hero__ball-container _mob_block" src="assets/media/ball.png" alt="ball"/>
+            <h1 class="h1"><img class="image s-hero__title-img _mob_hidden" src="assets/media/title.png" alt="football skills"/><img class="image s-hero__title-img_mob _mob_block" src="assets/media/title-mob.png" alt="football skills"/>
             </h1>
             <p class="s-hero__announce">объявляет набор<br/>мальчиков и девочек в возрасте 3+<br/>от 3 000 ₽/месяц</p>
             <button class="button _size_md s-hero__button" type="button" data-bs-toggle="modal" data-bs-target="#form"><span>Записаться<span class="_mob_hidden">НА БЕСПЛАТНОЕ ЗАНЯТИЕ</span></span></button>
@@ -50,42 +52,50 @@
           <div class="section__content">
             <h2 class="section__title">О НАС</h2>
             <div class="section__top s-about__top">
-              <p class="section__text s-about__text">FOOTBALL SKILLS — детская футбольная школа современного формата, основанная и активно развивающаяся  с июля 2014 года<br/><br/>Профессиональная методика нашей детской футбольной школы направлена на физическое и психологическое развитие детей различных возрастных групп. Благодаря опытному тренерскому составу тренировочный процесс интересен и эффективен, что даёт ребёнку возможность обрести качественные навыки игры в футбол, всестороннее физическое развитие, а также развитие личностных качеств</p><img class="image s-about__image" src="assets/media/boy.png" alt="a boy with ball"/>
+              <p class="section__text s-about__text">
+                FOOTBALL SKILLS — детская футбольная школа современного
+                формата, основанная и активно развивающаяся  с июля 2014 года<br/><br/>Профессиональная методика нашей детской футбольной школы
+                направлена на физическое и психологическое развитие детей
+                различных возрастных групп. Благодаря опытному тренерскому
+                составу тренировочный процесс интересен и эффективен, что даёт ребёнку возможность обрести качественные навыки игры
+                в футбол, всестороннее физическое развитие, а также развитие
+                личностных качеств
+              </p><img class="image s-about__image" src="assets/media/boy.png" alt="a boy with ball"/>
             </div>
             <div class="section__main s-about__content">
               <div class="s-about__item-benefit">
                 <div class="s-about__item-benefit-num-container">
-                  <div class="s-about__item-benefit-num"><span>1:0</span></div>
+                  <div class="s-about__item-benefit-num"><span>1<span class="_dot">:</span>0</span></div>
                 </div>
                 <div class="s-about__item-benefit-text">ТРЕНИРОВКИ ВО ВСЕХ РАЙОНАХ ГОРОДА</div>
               </div>
               <div class="s-about__item-benefit">
                 <div class="s-about__item-benefit-num-container">
-                  <div class="s-about__item-benefit-num"><span>2:0</span></div>
+                  <div class="s-about__item-benefit-num"><span>2<span class="_dot">:</span>0</span></div>
                 </div>
-                <div class="s-about__item-benefit-text">СКИДКА 50 % НА ВТОРОГО РЕБЁНКА ИЗ СЕМЬИ</div>
+                <div class="s-about__item-benefit-text">СКИДКА 50 <span >%</span> НА ВТОРОГО РЕБЁНКА ИЗ СЕМЬИ</div>
               </div>
               <div class="s-about__item-benefit">
                 <div class="s-about__item-benefit-num-container">
-                  <div class="s-about__item-benefit-num"><span>3:0</span></div>
+                  <div class="s-about__item-benefit-num"><span>3<span class="_dot">:</span>0</span></div>
                 </div>
                 <div class="s-about__item-benefit-text">ТРЕНИРОВКИ МЛАДШИХ ГРУПП В ИГРОВОЙ ФОРМЕ</div>
               </div>
               <div class="s-about__item-benefit">
                 <div class="s-about__item-benefit-num-container">
-                  <div class="s-about__item-benefit-num"><span>4:0</span></div>
+                  <div class="s-about__item-benefit-num"><span>4<span class="_dot">:</span>0</span></div>
                 </div>
                 <div class="s-about__item-benefit-text">ПОШИВ ФУТБОЛЬНОЙ ЭКИПИРОВКИ</div>
               </div>
               <div class="s-about__item-benefit">
                 <div class="s-about__item-benefit-num-container">
-                  <div class="s-about__item-benefit-num"><span>5:0</span></div>
+                  <div class="s-about__item-benefit-num"><span>5<span class="_dot">:</span>0</span></div>
                 </div>
                 <div class="s-about__item-benefit-text">УЧАСТИЕ В ТУРНИРАХ И СОРЕВНОВАНИЯХ</div>
               </div>
               <div class="s-about__item-benefit">
                 <div class="s-about__item-benefit-num-container">
-                  <div class="s-about__item-benefit-num"><span>6:0</span></div>
+                  <div class="s-about__item-benefit-num"><span>6<span class="_dot">:</span>0</span></div>
                 </div>
                 <div class="s-about__item-benefit-text">ОПЫТНЫЙ ТРЕНЕРСКИЙ СОСТАВ</div>
               </div>
@@ -98,7 +108,7 @@
           <div class="section__content">
             <h2 class="section__title">НАШИ ДОСТИЖЕНИЯ</h2>
             <div class="section__top s-progress__top">
-              <p class="section__text s-progress__text">Со дня основания детской футбольной школы «FOOTBALL SKILLS» было создано несколько команд спортивного совершенствования! За это время команды достигли отличных достижений, выступая на соревнованиях различного уровня. Принимая участие в городских, областных и межрегиональных соревнованиях, команды «FOOTBALL SKILLS» неоднократно становились победителями и призёрами!</p><img class="image s-progress__image" src="assets/media/progress.png" alt="progress"/>
+              <p class="section__text s-progress__text">Со дня основания детской футбольной школы «FOOTBALL SKILLS» было создано несколько команд спортивного совершенствования! За это время команды достигли отличных достижений, выступая на соревнованиях различного уровня. Принимая участие в городских, областных и межрегиональных соревнованиях, команды «FOOTBALL SKILLS» неоднократно становились победителями и призёрами!</p><img class="image s-progress__image" src="assets/media/progress.png" alt="progress"/>
             </div>
             <div class="section__main s-progress__years">
               <div class="card-year">
@@ -114,22 +124,23 @@
                 </div>
                 <div class="card-year__content">
                   <div class="card-year__content-top">
-                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2010» создана в 2016 году.
+                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2010» создана в 2016 году.
 Неоднократные победители городских, областных
 и межрегиональных соревнований, обладатели
 серебряных и бронзовых наград</p><img class="image card-year__image" src="assets/media/card-year-1.png" alt="photo"/>
+                    <p class="card-year__text _mob_hidden"></p>
                   </div>
                   <ul class="card-year__progress-list">
-                    <li>/Победитель «Кубка Александра Ерохина-2018 г.» г. Барнаул</li>
-                    <li>/Победитель финального этапа Первенства Кузбасса-2023 г. г. Кемерово</li>
-                    <li>/Серебряный призёр финального этапа Первенства Кузбасса-2024 г. г. Кемерово</li>
-                    <li>/Бронзовый призёр Первенства г. Кемерово-2024 г. г. Кемерово</li>
-                    <li>/Бронзовый призёр ДФЛ «Большие звёзды светят малым-2018» г. Барнаул</li>
-                    <li>/Бронзовый призёр турнира «FC TYUMEN CUP-2020» г. Тюмень</li>
-                    <li>/Бронзовый призёр «Забей в Темпе-2020» г. Барнаул</li>
-                    <li>/Бронзовый призёр «ДЮСШ-17»-2022 г. г. Томск</li>
-                    <li>/Бронзовый призёр турнира «Кузбасс — шахтёрская 2022 г.» г. Кемерово</li>
-                    <li>/Бронзовый призёр финального этапа Первенства Кузбасса-2022 г. г. Кемерово</li>
+                    <li>/Победитель «Кубка Александра Ерохина-2018 г.» г. Барнаул</li>
+                    <li>/Победитель финального этапа Первенства Кузбасса-2023 г. г. Кемерово</li>
+                    <li>/Серебряный призёр финального этапа Первенства Кузбасса-2024 г. г. Кемерово</li>
+                    <li>/Бронзовый призёр Первенства г. Кемерово-2024 г. г. Кемерово</li>
+                    <li>/Бронзовый призёр ДФЛ «Большие звёзды светят малым-2018» г. Барнаул</li>
+                    <li>/Бронзовый призёр турнира «FC TYUMEN CUP-2020» г. Тюмень</li>
+                    <li>/Бронзовый призёр «Забей в Темпе-2020» г. Барнаул</li>
+                    <li>/Бронзовый призёр «ДЮСШ-17»-2022 г. г. Томск</li>
+                    <li>/Бронзовый призёр турнира «Кузбасс — шахтёрская 2022 г.» г. Кемерово</li>
+                    <li>/Бронзовый призёр финального этапа Первенства Кузбасса-2022 г. г. Кемерово</li>
                   </ul>
                 </div>
               </div>
@@ -146,16 +157,17 @@
                 </div>
                 <div class="card-year__content">
                   <div class="card-year__content-top">
-                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2011» создана в 2017 году. Неоднократные победители в летних и зимних городских соревнованиях, обладатели серебряных и бронзовых наград</p><img class="image card-year__image" src="assets/media/card-year-2.png" alt="photo"/>
+                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2011» создана в 2017 году. Неоднократные победители в летних и зимних городских соревнованиях, обладатели серебряных и бронзовых наград</p><img class="image card-year__image" src="assets/media/card-year-2.png" alt="photo"/>
+                    <p class="card-year__text _mob_hidden"></p>
                   </div>
                   <ul class="card-year__progress-list">
-                    <li>/Победитель Первенства г. Кемерово-2024 г. г. Кемерово</li>
-                    <li>/Победитель финального этапа Первенства Кузбасса-2024 г. г. Новокузнецк</li>
-                    <li>/Неоднократный участник и призёр «KIMBERLY-CUP» Лиги чемпионов Сибири в 2019/2020 г.г.</li>
-                    <li>/Серебряный призёр «Сибирский Кубок-2019 г.» на призы Александра Соболева г. Барнаул</li>
-                    <li>/Бронзовый призёр финального турнира Областных соревнований-2023 г. г. Кемерово</li>
-                    <li>/Бронзовый призёр Чемпионата Кузбасса Областных соревнований-2022 г. г. Кемерово</li>
-                    <li>/Участник финального этапа Первенства Сибири-2024 г. ( 5 место) г. Новосибирск</li>
+                    <li>/Победитель Первенства г. Кемерово-2024 г. г. Кемерово</li>
+                    <li>/Победитель финального этапа Первенства Кузбасса-2024 г. г. Новокузнецк</li>
+                    <li>/Неоднократный участник и призёр «KIMBERLY-CUP» Лиги чемпионов Сибири в 2019/2020 г.г.</li>
+                    <li>/Серебряный призёр «Сибирский Кубок-2019 г.» на призы Александра Соболева г. Барнаул</li>
+                    <li>/Бронзовый призёр финального турнира Областных соревнований-2023 г. г. Кемерово</li>
+                    <li>/Бронзовый призёр Чемпионата Кузбасса Областных соревнований-2022 г. г. Кемерово</li>
+                    <li>/Участник финального этапа Первенства Сибири-2024 г. ( 5 место) г. Новосибирск</li>
                   </ul>
                 </div>
               </div>
@@ -173,26 +185,27 @@
                 <div class="card-year__content">
                   <div class="card-year__content-top">
                     <p class="card-year__text">ДФК «FOOTBALL SKILLS-2012» начала свою историю
-в 2018 году, регулярно принимая участие в турнирах
+в 2018 году, регулярно принимая участие в турнирах
 различного уровня. Команда «FOOTBALL SKILLS-2012»
-неоднократно становилась победителем и призёром
-в городских, областных и региональных соревнованиях</p><img class="image card-year__image" src="assets/media/card-year-3.png" alt="photo"/>
+неоднократно становилась победителем и призёром
+в городских, областных и региональных соревнованиях</p><img class="image card-year__image" src="assets/media/card-year-3.png" alt="photo"/>
+                    <p class="card-year__text _mob_hidden"></p>
                   </div>
                   <ul class="card-year__progress-list">
-                    <li>/Победитель «Открытого кубка Казани памяти В.И.Голубева-2021 г.» г. Казань</li>
-                    <li>/Победитель «Открытого турнира МАУ ДО ДЮСШ 17-2021 г.» г. Томск</li>
-                    <li>/Победитель «Кубка Гагарина-2022 г.» г. Кемерово</li>
-                    <li>/Победитель финального этапа Первенства Кузбасса-2022 г. г. Новокузнецк</li>
-                    <li>/Победитель финального этапа Первенства Кузбасса-2023 г. г. Кемерово</li>
-                    <li>/Победитель Первенства и Кубка лиги  г. Кемерово-2024 г. г. Кемерово</li>
-                    <li>/Победитель финального этапа Первенства Кузбасса-2024 г. г. Междуреченск</li>
-                    <li>/Серебряный призёр Лиги «Пионер-2021 г.» г. Омск</li>
-                    <li>/Серебряный призёр «Kimberly-Cup-2019, League Siberia» г. Новосибирск</li>
+                    <li>/Победитель «Открытого кубка Казани памяти В.И.Голубева-2021 г.» г. Казань</li>
+                    <li>/Победитель «Открытого турнира МАУ ДО ДЮСШ 17-2021 г.» г. Томск</li>
+                    <li>/Победитель «Кубка Гагарина-2022 г.» г. Кемерово</li>
+                    <li>/Победитель финального этапа Первенства Кузбасса-2022 г. г. Новокузнецк</li>
+                    <li>/Победитель финального этапа Первенства Кузбасса-2023 г. г. Кемерово</li>
+                    <li>/Победитель Первенства и Кубка лиги  г. Кемерово-2024 г. г. Кемерово</li>
+                    <li>/Победитель финального этапа Первенства Кузбасса-2024 г. г. Междуреченск</li>
+                    <li>/Серебряный призёр Лиги «Пионер-2021 г.» г. Омск</li>
+                    <li>/Серебряный призёр «Kimberly-Cup-2019, League Siberia» г. Новосибирск</li>
                     <li>/Серебряный призёр XVIII Международного фестиваля «ЛОКОБОЛ-2024-РЖД»</li>
-                    <li>/Серебряный призёр турнира «Кузбасс — шахтёрская столица» 2022 г. г. Кемерово</li>
-                    <li>/Бронзовый призёр «Future Football Generation Cup-2019 г.» г. Новосибирск</li>
-                    <li>/Бронзовый призёр «Kimberly-Cup-2020 г.» г. Новосибирск</li>
-                    <li>/Бронзовый призёр «Кубок Дружбы-2021 г.» г. Омск</li>
+                    <li>/Серебряный призёр турнира «Кузбасс — шахтёрская столица» 2022 г. г. Кемерово</li>
+                    <li>/Бронзовый призёр «Future Football Generation Cup-2019 г.» г. Новосибирск</li>
+                    <li>/Бронзовый призёр «Kimberly-Cup-2020 г.» г. Новосибирск</li>
+                    <li>/Бронзовый призёр «Кубок Дружбы-2021 г.» г. Омск</li>
                   </ul>
                 </div>
               </div>
@@ -209,18 +222,19 @@
                 </div>
                 <div class="card-year__content">
                   <div class="card-year__content-top">
-                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2013» создана в 2019 году. Команда неоднократно становилась победителем в летних и зимних городских соревнованиях, также победителями и призёрами городских первенств в старшей возрастной группе по 2012 году рождения</p><img class="image card-year__image" src="assets/media/card-year-4.png" alt="photo"/>
+                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2013» создана в 2019 году. Команда неоднократно становилась победителем в летних и зимних городских соревнованиях, также победителями и призёрами городских первенств в старшей возрастной группе по 2012 году рождения</p><img class="image card-year__image" src="assets/media/card-year-4.png" alt="photo"/>
+                    <p class="card-year__text _mob_hidden"></p>
                   </div>
                   <ul class="card-year__progress-list">
-                    <li>/Победитель «KIMBERLY-CUP» Лиги чемпионов Сибири-2021 г. г. Новосибирск</li>
-                    <li>/Победитель Первенства г. Кемерово-2024 г. (Кубок г. Кемерово)</li>
+                    <li>/Победитель «KIMBERLY-CUP» Лиги чемпионов Сибири-2021 г. г. Новосибирск</li>
+                    <li>/Победитель Первенства г. Кемерово-2024 г. (Кубок г. Кемерово)</li>
                     <li>/Победитель Кубка пос. Плотниково «Твой стадион-2021 г.» пос. Плотниково</li>
-                    <li>/Серебряный призёр «Золотого Кубка горняка-2022 г.» г. Ленинск-Кузнецкий</li>
-                    <li>/Серебряный призёр турнира «Кузбасс — шахтёрская столица 2022 г.» г. Кемерово</li>
-                    <li>/Серебряный призёр финальных областных соревнований 2023 г. г. Новокузнецк</li>
-                    <li>/Бронзовый призёр Первенства Кузбасса-2024 г. г. Кемерово</li>
-                    <li>/Бронзовый призёр финального этапа Первенства Кузбасса-2024 г. г. Новокузнецк</li>
-                    <li>/Неоднократный участник и призёр «KIMBERLY-CUP» Лиги чемпионов Сибири в 2019/2020 г.г.</li>
+                    <li>/Серебряный призёр «Золотого Кубка горняка-2022 г.» г. Ленинск-Кузнецкий</li>
+                    <li>/Серебряный призёр турнира «Кузбасс — шахтёрская столица 2022 г.» г. Кемерово</li>
+                    <li>/Серебряный призёр финальных областных соревнований 2023 г. г. Новокузнецк</li>
+                    <li>/Бронзовый призёр Первенства Кузбасса-2024 г. г. Кемерово</li>
+                    <li>/Бронзовый призёр финального этапа Первенства Кузбасса-2024 г. г. Новокузнецк</li>
+                    <li>/Неоднократный участник и призёр «KIMBERLY-CUP» Лиги чемпионов Сибири в 2019/2020 г.г.</li>
                   </ul>
                 </div>
               </div>
@@ -237,17 +251,18 @@
                 </div>
                 <div class="card-year__content">
                   <div class="card-year__content-top">
-                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2014» создана в 2020 году.
+                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2014» создана в 2020 году.
 Команда неоднократно становилась победителем
 летних/зимних городских соревнований, призёрами
 различных турниров. В 2024 году команда вышла
-в финал Первенства области Кузбасса</p><img class="image card-year__image" src="assets/media/card-year-5.png" alt="photo"/>
+в финал Первенства области Кузбасса</p><img class="image card-year__image" src="assets/media/card-year-5.png" alt="photo"/>
+                    <p class="card-year__text _mob_hidden"></p>
                   </div>
                   <ul class="card-year__progress-list">
                     <li>/Победитель турнира “Кубок Плотниково-2022 г.” по мини-футболу пос. Плотниково</li>
-                    <li>/Победитель турнира по мини-футболу Кузбасса-2023 г. г. Белово</li>
-                    <li>/Бронзовый призёр Кубка «Твой стадион-2022 г.» г. Белово</li>
-                    <li>/Бронзовый призёр Первенства г. Кемерово-2024 г. г. Кемерово</li>
+                    <li>/Победитель турнира по мини-футболу Кузбасса-2023 г. г. Белово</li>
+                    <li>/Бронзовый призёр Кубка «Твой стадион-2022 г.» г. Белово</li>
+                    <li>/Бронзовый призёр Первенства г. Кемерово-2024 г. г. Кемерово</li>
                   </ul>
                 </div>
               </div>
@@ -264,7 +279,8 @@
                 </div>
                 <div class="card-year__content">
                   <div class="card-year__content-top">
-                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2015» создана в 2021 году. Команда неоднократно принимает участие в летних и зимних городских соревнованиях</p><img class="image card-year__image" src="assets/media/card-year-6.png" alt="photo"/>
+                    <p class="card-year__text">ДФК «FOOTBALL SKILLS-2015» создана в 2021 году. Команда неоднократно принимает участие в летних и зимних городских соревнованиях</p><img class="image card-year__image" src="assets/media/card-year-6.png" alt="photo"/>
+                    <p class="card-year__text _mob_hidden"></p>
                   </div>
                   <ul class="card-year__progress-list">
                     <li>/Победитель турнира “Кубок Плотниково-2023 г.” по мини-футболу пос. Плотниково</li>
@@ -343,7 +359,7 @@
           <div class="section__content">
             <h2 class="section__title">РАСПИСАНИЕ ТРЕНИРОВОК</h2>
             <div class="section__top s-schedule__top">
-              <p class="section__text s-schedule__text">Для удобства юных футболистов и их родителей тренировки детской футбольной школы «FOOTBALL SKILLS» проводятся в вечернее время во всех районах города. В летнее время тренировки проводятся на открытых площадках города, что способствует поддерживать физическую форму, развивать технические навыки и улучшать параметры организма</p><img class="image s-schedule__image" src="assets/media/BOYS.png" alt="boys"/>
+              <p class="section__text s-schedule__text">Для удобства юных футболистов и их родителей тренировки детской футбольной школы «FOOTBALL SKILLS» проводятся в вечернее время во всех районах города. В летнее время тренировки проводятся на открытых площадках города, что способствует поддерживать физическую форму, развивать технические навыки и улучшать параметры организма</p><img class="image s-schedule__image" src="assets/media/BOYS.png" alt="boys"/>
             </div>
             <div class="swiper-container s-schedule__swiper-container">
               <div class="swiper s-schedule__swiper-thumbs" thumbsSlider="">
@@ -363,7 +379,7 @@
                       <h3 class="card-district__title">ЦЕНТРАЛЬНЫЙ РАЙОН</h3>
                       <div class="card-district__filials">
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>Спортивный зал МБОУ «СОШ № 7» г. Кемерово, ул. Пролетарская, 10</span>
+                          <div class="card-district__address"><span>Спортивный зал МБОУ «СОШ № 7» г. Кемерово, ул. Пролетарская, 10</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -395,7 +411,7 @@
                       <h3 class="card-district__title">ЛЕНИНСКИЙ РАЙОН</h3>
                       <div class="card-district__filials">
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>Спортивный зал МБОУ «СОШ № 58» г. Кемерово, ул. Ворошилова, 18Д</span>
+                          <div class="card-district__address"><span>Спортивный зал МБОУ «СОШ № 58» г. Кемерово, ул. Ворошилова, 18Д</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -421,7 +437,7 @@
                           </div>
                         </div>
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>Спортивный зал МБОУ «СОШ № 77» г. Кемерово, пр-т Октябрьский, 56Б</span>
+                          <div class="card-district__address"><span>Спортивный зал МБОУ «СОШ № 77» г. Кемерово, пр-т Октябрьский, 56Б</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -443,7 +459,7 @@
                       <h3 class="card-district__title">ЗАВОДСКИЙ РАЙОН</h3>
                       <div class="card-district__filials">
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>Спортивный зал МАОУ «СОШ № 78» г. Кемерово, ул. Юрия Двужильного, 12В</span>
+                          <div class="card-district__address"><span>Спортивный зал МАОУ «СОШ № 78» г. Кемерово, ул. Юрия Двужильного, 12В</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -486,7 +502,7 @@
                       <h3 class="card-district__title">РУДНИЧНЫЙ РАЙОН</h3>
                       <div class="card-district__filials">
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>1 КОРПУС</span><span>Спортивный зал МАОУ «СОШ № 36» г. Кемерово, ул. Серебряный бор, 11Б</span>
+                          <div class="card-district__address"><span>1 КОРПУС</span><span>Спортивный зал МАОУ «СОШ № 36» г. Кемерово, ул. Серебряный бор, 11Б</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -520,7 +536,7 @@
                           </div>
                         </div>
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>2 КОРПУС</span><span>Спортивный зал МАОУ «СОШ № 36» г. Кемерово, ул. Серебряный бор, 11Б</span>
+                          <div class="card-district__address"><span>2 КОРПУС</span><span>Спортивный зал МАОУ «СОШ № 36» г. Кемерово, ул. Серебряный бор, 11Б</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -553,7 +569,7 @@
                       <h3 class="card-district__title">ЛЕСНАЯ ПОЛЯНА</h3>
                       <div class="card-district__filials">
                         <div class="card-district__filial">
-                          <div class="card-district__address"><span>Спортивный зал МАОУ «Гимназия № 42» г. Кемерово, ул. Щегловская, 2</span>
+                          <div class="card-district__address"><span>Спортивный зал МАОУ «Гимназия № 42» г. Кемерово, ул. Щегловская, 2</span>
                           </div>
                           <div class="card-district__groups">
                             <div class="card-district__group">
@@ -592,7 +608,7 @@
           <div class="section__content">
             <h2 class="section__title">ТРЕНЕРСКИЙ СОСТАВ</h2>
             <div class="section__top s-trainers__top">
-              <p class="section__text s-trainers__text">Каждый тренер детской футбольной школы «FOOTBALL SKILLS» это друг, вдохновитель, мотиватор и наставник для каждого юного футболиста<br/><br/>Сбалансированный подход к тренировкам и учёт возрастных особенностей это ключ к успешному развитию и формированию ценных качеств у ребёнка</p><img class="image s-trainers__image" src="assets/media/FS.png" alt=""/>
+              <p class="section__text s-trainers__text">Каждый тренер детской футбольной школы «FOOTBALL SKILLS» это друг, вдохновитель, мотиватор и наставник для каждого юного футболиста<br/><br/>Сбалансированный подход к тренировкам и учёт возрастных особенностей это ключ к успешному развитию и формированию ценных качеств у ребёнка</p><img class="image s-trainers__image" src="assets/media/FS.png" alt=""/>
             </div>
             <div class="swiper-container s-trainers__swiper-container">
               <div class="swiper s-trainers__swiper">
@@ -607,15 +623,15 @@
                       <div class="card-trainer__image-container"><img class="image card-trainer__image" src="assets/media/t1.png" alt=""/>
                       </div>
                       <div class="card-trainer__content">
-                        <h4 class="card-trainer__name">Матюшев Олег Николаевич</h4>
+                        <h4 class="card-trainer__name">Матюшев Олег Николаевич</h4>
                         <h5 class="card-trainer__item-value _view-mob_center">Главный тренер/руководитель</h5>
                         <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
                         <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">воспитанник Кемеровского
-футбола с 1985 г. МУ «СДЮСШОР по футболу» г. Кемерово.
+футбола с 1985 г. МУ «СДЮСШОР по футболу» г. Кемерово.
 Профессионально играл за такие клубы, как: ФК «Кузбасс»
-г. Кемерово, ФК «Иртыш» г. Омск, ФК «Кузбасс-Динамо»
-г. Кемерово, ФК «Динамо» г. Барнаул, ФК «Распадская»
-г. Междуреченск, ФК «Кемерово» г. Кемерово</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2014 года</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Тренерская лицензия:</span><span class="card-trainer__item-value">С-УЕФА</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
+г. Кемерово, ФК «Иртыш» г. Омск, ФК «Кузбасс-Динамо»
+г. Кемерово, ФК «Динамо» г. Барнаул, ФК «Распадская»
+г. Междуреченск, ФК «Кемерово» г. Кемерово</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2014 года</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Тренерская лицензия:</span><span class="card-trainer__item-value">С-УЕФА</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
                         </div>
                       </div>
                     </div>
@@ -630,7 +646,7 @@
                       <div class="card-trainer__image-container"><img class="image card-trainer__image" src="assets/media/t2.png" alt=""/>
                       </div>
                       <div class="card-trainer__content">
-                        <h4 class="card-trainer__name">Лобатнёв Юрий Юрьевич</h4>
+                        <h4 class="card-trainer__name">Лобатнёв Юрий Юрьевич</h4>
                         <h5 class="card-trainer__item-value _view-mob_center">Тренер</h5>
                         <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
                         <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">воспитанник Кемеровского футбола с 1992 г.МУ «СДЮСШОР по футболу» г.Кемерово.Профессионально играл за такие клубы, как: ФК «Кузбасс» г.Кемерово, ФК «Динамо» г.Кемерово, ФК «Кузбасс - Динамо» г.Кемерово, ФК «Распадская» г.Междуреченск, ФК «Кемерово» г.Кемерово, ФК «Шахтёр» г.Прокопьевск</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2014 года</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Тренерская лицензия:</span><span class="card-trainer__item-value">С-УЕФА</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
@@ -648,14 +664,14 @@
                       <div class="card-trainer__image-container"><img class="image card-trainer__image" src="assets/media/t3.png" alt=""/>
                       </div>
                       <div class="card-trainer__content">
-                        <h4 class="card-trainer__name">Селезнёв Игорь Валентинович</h4>
+                        <h4 class="card-trainer__name">Селезнёв Игорь Валентинович</h4>
                         <h5 class="card-trainer__item-value _view-mob_center">Тренер</h5>
                         <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
                         <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">воспитанник Кемеровского
-футбола с 1976 г. МУ «СДЮСШОР по футболу» г. Кемерово.
+футбола с 1976 г. МУ «СДЮСШОР по футболу» г. Кемерово.
 Профессионально играл за такие клубы, как: ФК «Кузбасс»
-г. Кемерово, ФК «Динамо» г. Кемерово, ФК «Кузбасс-Динамо»
-г. Кемерово, ФК «Прогресс» г. Бийск, ФК «Мотор» г. Прокопьевск</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 1996 года</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Тренерская лицензия:</span><span class="card-trainer__item-value">В-Юношеский футбол</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
+г. Кемерово, ФК «Динамо» г. Кемерово, ФК «Кузбасс-Динамо»
+г. Кемерово, ФК «Прогресс» г. Бийск, ФК «Мотор» г. Прокопьевск</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 1996 года</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Тренерская лицензия:</span><span class="card-trainer__item-value">В-Юношеский футбол</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
                         </div>
                       </div>
                     </div>
@@ -688,11 +704,11 @@
                       <div class="card-trainer__image-container"><img class="image card-trainer__image" src="assets/media/t5.png" alt=""/>
                       </div>
                       <div class="card-trainer__content">
-                        <h4 class="card-trainer__name">Филимонов Иван Сергеевич</h4>
+                        <h4 class="card-trainer__name">Филимонов Иван Сергеевич</h4>
                         <h5 class="card-trainer__item-value _view-mob_center">Тренер</h5>
                         <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
                         <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">воспитанник Кемеровского
-футбола с 2002 г. МУ «СДЮСШОР по футболу» г. Кемерово</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2017 года</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
+футбола с 2002 г. МУ «СДЮСШОР по футболу» г. Кемерово</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2017 года</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
                         </div>
                       </div>
                     </div>
@@ -707,7 +723,7 @@
                       <div class="card-trainer__image-container"><img class="image card-trainer__image" src="assets/media/t6.png" alt=""/>
                       </div>
                       <div class="card-trainer__content">
-                        <h4 class="card-trainer__name">Быков Павел Юрьевич</h4>
+                        <h4 class="card-trainer__name">Быков Павел Юрьевич</h4>
                         <h5 class="card-trainer__item-value _view-mob_center">Тренер</h5>
                         <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
                         <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">воспитанник Новосибирского футбола с 2003 г.МУ ДЮСШ «Динамо» г.Тогучин</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2017 года</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
@@ -729,26 +745,8 @@
                         <h5 class="card-trainer__item-value _view-mob_center">Тренер</h5>
                         <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
                         <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">воспитанник Кемеровского
-футбола с 2000 г. МБУ ДО «ИЖМОРСКАЯ ДЮСШ по футболу»
-г. Анжеро-Судженск</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2020 года</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide s-trainers__swiper-slide">
-                    <div class="card-trainer">
-                      <button class="card-trainer__button-close">
-                        <svg class="icon card-trainer__icon-button">
-                          <use xlink:href="assets/icons/default/sprite.svg#plusBold"></use>
-                        </svg>
-                      </button>
-                      <div class="card-trainer__image-container">
-                      </div>
-                      <div class="card-trainer__content">
-                        <h4 class="card-trainer__name">Мелешков Андрей Леонидович</h4>
-                        <h5 class="card-trainer__item-value _view-mob_center">Тренер</h5>
-                        <button class="button _theme_transparent _size_sm _mob_flex card-trainer__button" type="button"><span>ПОДРОБНЕЕ<span class="_mob_hidden"></span></span></button>
-                        <div class="card-trainer__info"><span class="card-trainer__item-wrapper _view-mob_flex"><span class="card-trainer__item-title">Профессиональная карьера:</span><span class="card-trainer__item-value">Профессиональная карьера: воспитанник Кемеровского футбола с 1994 г.МУ «СДЮСШОР по футболу» г.Кемерово</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2018 года</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
+футбола с 2000 г. МБУ ДО «ИЖМОРСКАЯ ДЮСШ по футболу»
+г. Анжеро-Судженск</span></span><span class="card-trainer__item-wrapper"><span class="card-trainer__item-title">Стаж тренерской деятельности:</span><span class="card-trainer__item-value">c 2020 года</span></span><span class="card-trainer__item-wrapper _mr-md"><span class="card-trainer__item-title">Образование:</span><span class="card-trainer__item-value">высшее</span></span>
                         </div>
                       </div>
                     </div>
@@ -769,7 +767,7 @@
             <div class="s-faq__content">
               <div class="card-faq">
                 <div class="card-faq__header">
-                  <div class="card-faq__title"><span class="card-faq__num">01 /</span><span class="card-faq__question">Необходима ли медицинская справка о разрешении занятия спортом при приёме в школу?</span></div>
+                  <div class="card-faq__title"><span class="card-faq__num">01 /</span><span class="card-faq__question">Необходима ли медицинская справка о разрешении занятия спортом при приёме в школу?</span></div>
                   <button class="card-faq__button">
                     <svg class="icon card-faq__plus">
                       <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
@@ -785,7 +783,7 @@
               </div>
               <div class="card-faq">
                 <div class="card-faq__header">
-                  <div class="card-faq__title"><span class="card-faq__num">02 /</span><span class="card-faq__question">Тренируются ли дети разного возраста в одной группе, например, 5-ти летние с 10-ти летними?</span></div>
+                  <div class="card-faq__title"><span class="card-faq__num">02 /</span><span class="card-faq__question">Тренируются ли дети разного возраста в одной группе, например, 5-ти летние с 10-ти летними?</span></div>
                   <button class="card-faq__button">
                     <svg class="icon card-faq__plus">
                       <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
@@ -817,7 +815,7 @@
               </div>
               <div class="card-faq">
                 <div class="card-faq__header">
-                  <div class="card-faq__title"><span class="card-faq__num">04 /</span><span class="card-faq__question">Не повлияет ли отрицательно тренировочный процесс на успеваемость в школе?</span></div>
+                  <div class="card-faq__title"><span class="card-faq__num">04 /</span><span class="card-faq__question">Не повлияет ли отрицательно тренировочный процесс на успеваемость в школе?</span></div>
                   <button class="card-faq__button">
                     <svg class="icon card-faq__plus">
                       <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
@@ -844,7 +842,7 @@
                   </button>
                 </div>
                 <div class="card-faq__content">
-                  <p class="card-faq__answer">Ответ: До того, как ребёнок получит форму, на занятия нужно приходить в обычной
+                  <p class="card-faq__answer">Ответ: До того, как ребёнок получит форму, на занятия нужно приходить в обычной
 спортивной форме: футболка, шорты, кеды/футзалки. Летом наши занятия проходят
 на открытых площадках. В таких случаях спортивная одежда должна соответствовать
 погодным условиям. Важно, чтобы форма была удобной и не стесняла движений ребёнка</p>
@@ -1016,30 +1014,54 @@
             </div>
             <div class="footer__partners"><a class="footer__link-news" href="/news.html">Новости</a>
               <h4 class="footer__subtitle">НАШИ ПАРТНёРЫ:</h4>
-              <div class="row-flex _gap_xxs _flex-wrap"><a class="footer__partner-link" href="https://2gis.ru/kemerovo/firm/70000001076256370">
-                  <svg class="icon">
+              <div class="row-flex _gap_xxs _mob-flex-wrap"><a class="footer__partner-link" href="https://2gis.ru/kemerovo/firm/70000001076256370">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p1"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p1h"></use>
                   </svg></a><a class="footer__partner-link" href="https://www.dynamo.su/about/organizations/kemerovskoe-oblastnoe-otdelenie-obshchestva-dinamo/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p2"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p2h"></use>
                   </svg></a><a class="footer__partner-link" href="https://raduga36.ru/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p3"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p3h"></use>
                   </svg></a><a class="footer__partner-link" href="http://school78kem.ru/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p4"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p4h"></use>
                   </svg></a><a class="footer__partner-link" href="https://kem-school77.ru/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p5"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p5h"></use>
                   </svg></a><a class="footer__partner-link" href="http://школа58кемерово.рф/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p6"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p6h"></use>
                   </svg></a><a class="footer__partner-link" href="https://gimnaziya42-kem.kemobl.ru/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p7"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p7h"></use>
                   </svg></a><a class="footer__partner-link" href="http://stadium-shahter.ru/">
-                  <svg class="icon">
+                  <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p8"></use>
+                  </svg>
+                  <svg class="icon footer__partner-link-icon _hovered">
+                    <use xlink:href="assets/icons/default/sprite.svg#p8h"></use>
                   </svg></a>
               </div>
             </div>
@@ -1047,9 +1069,9 @@
               <div class="footer__eq-content"><img class="image footer__back" src="assets/media/set.png" alt=""/>
                 <h4 class="footer__subtitle _mob_hidden">ЗАКАЗ ЭКИПИРОВКИ:</h4><a class="_mob_flex" href="https://wa.me/79039464875" target="_blank">ЗАКАЗ ЭКИПИРОВКИ</a><img class="image footer__logo" src="assets/media/logoA.png" alt="logo"/><a class="_mob_hidden" href="https://wa.me/79039464875" target="_blank">ОФОРМИТЬ заказ</a>
               </div>
-            </div><a class="footer__politic" href="">Политика конфиденциальности</a>
+            </div><a class="footer__politic" href="politic.html">Политика конфиденциальности</a>
             <div class="footer__authors">
-              <!--a(href="mailto: oleg.matjushev@rambler.ru").footer__author-ol oleg.matjushev@rambler.ru--><a class="footer__author-t" href="https://t.me/tatyanaartyukhina">web-designer: artyukhina tatyana</a>
+              <!--a(href="mailto: oleg.matjushev@rambler.ru").footer__author-ol oleg.matjushev@rambler.ru--><a class="footer__author-t" href="https://t.me/tatyanaartyukhina">WEB DESIGNER: artyukhina tatyana</a>
             </div>
           </div>
         </div>
