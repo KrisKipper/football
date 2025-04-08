@@ -414,6 +414,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 (function () {
   var component = function component(element) {
     if (!element) return;
+    document.querySelectorAll('a').forEach(function (link) {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
     var burgerButton = element.querySelector('.header__button');
     var navItems = element.querySelectorAll('.header__nav-item');
     try {
