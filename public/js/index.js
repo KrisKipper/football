@@ -37,6 +37,23 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     }
   };
 })(window);
+window.openModal = function (id) {
+  var modalElement = document.getElementById(id);
+  if (modalElement) {
+    var myModal = new bootstrap.Modal(modalElement);
+    myModal.show();
+  } else {
+    console.error("\u042D\u043B\u0435\u043C\u0435\u043D\u0442 \u0441 id \"".concat(id, "\" \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442."));
+  }
+};
+window.closeModal = function (id) {
+  var modal = bootstrap.Modal.getInstance("#".concat(id));
+  if (modal) {
+    modal.hide();
+  } else {
+    console.error("\u041C\u043E\u0434\u0430\u043B\u044C\u043D\u043E\u0435 \u043E\u043A\u043D\u043E \u0441 id \"".concat(id, "\" \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E."));
+  }
+};
 (function (window) {
   if (!window.app) {
     window.app = {};
@@ -499,6 +516,14 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     var swiperTrainers = new Swiper(sliderTrainers, {
       slidesPerView: 1,
       spaceBetween: 40,
+      breakpoints: {
+        860: {
+          spaceBetween: 0
+        },
+        861: {
+          spaceBetween: 40
+        }
+      },
       pagination: {
         el: fractionPagination,
         type: "fraction"
@@ -565,9 +590,10 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     var openButton = element.querySelector(".card-trainer__button");
     var closeButton = element.querySelector(".card-trainer__button-close");
     var sliderTrainers = element.querySelector('.s-trainers__swiper') || element.closest('.s-trainers__swiper');
+    var cards = document.querySelectorAll('.card-trainer');
     var isActive = element.classList.contains('active');
     openButton.addEventListener('click', function () {
-      document.querySelectorAll('.card-trainer').forEach(function (card) {
+      cards.forEach(function (card) {
         if (!isActive) {
           card.classList.add('active');
         }
@@ -578,6 +604,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     });
     closeButton.addEventListener('click', function () {
       element.classList.remove('active');
+      cards.forEach(function (card) {
+        if (!isActive) {
+          card.classList.remove('active');
+        }
+      });
       if (sliderTrainers) {
         sliderTrainers.classList.remove('active');
       }
@@ -607,4 +638,101 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     });
   };
   document.addEventListener('DOMContentLoaded', onLoad);
+})();
+(function () {
+  var component = function component(element) {
+    if (!element) return;
+    var cookie = element;
+    var button = cookie.querySelector('[data-button="cookie"]');
+    function getCookie(name) {
+      var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+    function setCookie(name, value, options) {
+      options = options || {};
+      var expires = options.expires;
+      if (typeof expires == "number" && expires) {
+        var d = new Date();
+        d.setTime(d.getTime() + expires * 1000);
+        expires = options.expires = d;
+      }
+      if (expires && expires.toUTCString) {
+        options.expires = expires.toUTCString();
+      }
+      value = encodeURIComponent(value);
+      var updatedCookie = name + "=" + value;
+      for (var propName in options) {
+        updatedCookie += "; " + propName;
+        var propValue = options[propName];
+        if (propValue !== true) {
+          updatedCookie += "=" + propValue;
+        }
+      }
+      document.cookie = updatedCookie;
+    }
+    setTimeout(function () {
+      // if (!getCookie('cookie_modal')) {
+      //   cookie.classList.add('visible');
+      // }
+      cookie.classList.add('visible');
+    }, 2000);
+    button.addEventListener('click', function () {
+      cookie.classList.remove('visible');
+    });
+    var CookiesBlockOk = cookie.querySelector('.cookie__button');
+    var options = {
+      expires: new Date(Date.now() + 1000 /*sec*/ * 60 /*min*/ * 60 /*hour*/ * 24 /*day*/ * 365)
+    };
+    CookiesBlockOk.addEventListener('click', function () {
+      setCookie('cookie_modal', 1, options);
+      cookie.classList.remove('visible');
+    });
+  };
+  var mount = function mount() {
+    document.querySelectorAll('.cookie').forEach(component);
+  };
+  document.addEventListener('DOMContentLoaded', mount);
+})();
+(function () {
+  var component = function component(formElement) {
+    var nameInput = formElement.querySelector('#name');
+    var phoneInput = formElement.querySelector('#mobile-phone');
+    var childNameInput = formElement.querySelector('#childName');
+    var ageRadioGroup = formElement.querySelector('input[name="age"]:checked');
+    var districtRadioGroup = formElement.querySelector('input[name="district"]:checked');
+    var politicCheckbox = formElement.querySelector('#politicForm');
+    var submitButton = formElement.querySelector('.form__button');
+    var checkFormValidity = function checkFormValidity() {
+      var isNameValid = nameInput.value.trim() !== '';
+      var isPhoneValid = phoneInput.value.trim() !== '' && !phoneInput.value.includes('_');
+      var isChildNameValid = childNameInput.value.trim() !== '';
+      var isAgeSelected = formElement.querySelector('input[name="age"]:checked') !== null;
+      var isDistrictSelected = formElement.querySelector('input[name="district"]:checked') !== null;
+      var isPoliticChecked = politicCheckbox.checked;
+      if (isNameValid && isPhoneValid && isChildNameValid && isAgeSelected && isDistrictSelected && isPoliticChecked) {
+        submitButton.classList.remove('disabled');
+        submitButton.removeAttribute('disabled');
+      } else {
+        submitButton.classList.add('disabled');
+        submitButton.setAttribute('disabled', 'disabled');
+      }
+    };
+    nameInput.addEventListener('input', checkFormValidity);
+    phoneInput.addEventListener('input', checkFormValidity);
+    childNameInput.addEventListener('input', checkFormValidity);
+    var radioButtons = formElement.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(function (radio) {
+      radio.addEventListener('change', checkFormValidity);
+    });
+    politicCheckbox.addEventListener('change', checkFormValidity);
+    checkFormValidity();
+    submitButton.addEventListener('click', function () {
+      closeModal("form");
+      openModal("finish");
+    });
+  };
+  var mount = function mount() {
+    document.querySelectorAll('.form').forEach(component);
+  };
+  document.addEventListener('DOMContentLoaded', mount);
 })();

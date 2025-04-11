@@ -21,6 +21,13 @@
     }
   }
 
+  &__swiper-wrapper {
+
+    @media only screen and (max-width: config.$bp-xsm) {
+      width: 280px;
+    }
+  }
+
   &__years {
     margin-top: 22px;
 

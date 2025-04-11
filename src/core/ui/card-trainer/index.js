@@ -4,12 +4,12 @@
         const openButton = element.querySelector(".card-trainer__button");
         const closeButton = element.querySelector(".card-trainer__button-close");
         const sliderTrainers = element.querySelector('.s-trainers__swiper') || element.closest('.s-trainers__swiper');
-
+        const cards = document.querySelectorAll('.card-trainer');
         const isActive = element.classList.contains('active');
 
         openButton.addEventListener('click', function() {
 
-            document.querySelectorAll('.card-trainer').forEach((card) => {
+            cards.forEach((card) => {
                 if (!isActive) {
                     card.classList.add('active');
                 }
@@ -22,6 +22,12 @@
 
         closeButton.addEventListener('click', function() {
             element.classList.remove('active');
+
+            cards.forEach((card) => {
+                if (!isActive) {
+                    card.classList.remove('active');
+                }
+            });
 
             if(sliderTrainers) {
                 sliderTrainers.classList.remove('active');

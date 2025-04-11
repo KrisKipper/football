@@ -25,12 +25,17 @@
 
     @media only screen and (max-width: config.$bp-tablet) {
       align-items: center;
+      margin-bottom: 32px;
     }
   }
 
   &__eq {
     grid-area: 1 / 2 / 3 / 3;
     position: relative;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin-bottom: 85px;
+    }
   }
 
   &__partners {
@@ -43,7 +48,7 @@
       justify-content: center;
       align-items: center;
       max-width: 290px;
-      margin: 0 auto;
+      margin: 0 auto 32px;
     }
   }
 
@@ -59,6 +64,7 @@
 
     @media only screen and (max-width: config.$bp-tablet) {
       text-decoration: underline;
+      margin: 0 auto 16px;
     }
   }
 
@@ -67,11 +73,12 @@
     grid-template-columns: min(480px, 32.42%) min(328px, 24.8%) min(480px, 32.42%);
     grid-template-rows: 183px 60px;
     grid-column-gap: min(68px, 5.15%);
+    position: relative;
 
     @media only screen and (max-width: config.$bp-tablet) {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 0;
     }
   }
 
@@ -136,6 +143,12 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin: 0;
+      position: absolute;
+      bottom: 78px;
+    }
   }
 
   &__subtitle {
@@ -152,13 +165,19 @@
     transition: .3s ease-in;
 
     @media only screen and (max-width: config.$bp-tablet) {
-      margin: 0 auto;
       font-size: 14px;
     }
 
     &:hover {
       color: config.$colors-white;
       text-decoration: underline;
+    }
+  }
+
+  &__author-t {
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin: 0 auto;
     }
   }
 
@@ -246,6 +265,22 @@
       .footer__partner-link-icon._hovered {
         opacity: 1;
       }
+    }
+  }
+
+
+
+  &__partners-links {
+    display: flex;
+    gap: 5px;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      flex-wrap: wrap;
+      -webkit-column-gap: 26px !important;
+      -moz-column-gap: 26px !important;
+      column-gap: 26px !important;
+      row-gap: 0 !important;
+      max-width: 290px;
     }
   }
 }

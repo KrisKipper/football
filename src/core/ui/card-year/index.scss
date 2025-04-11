@@ -19,6 +19,7 @@
 
     @media only screen and (max-width: config.$bp-tablet) {
       padding: 17px 12px 6px;
+      height: 60px;
     }
   }
 
@@ -104,11 +105,11 @@
     font-size: 24px;
     line-height: 100%;
     letter-spacing: 0;
-    color: config.$colors-white-50;
     width: min(418px, 33%);
 
     @media only screen and (max-width: config.$bp-tablet) {
-      font-size: 16px;
+      font-size: 17px;
+      line-height: 22px;
       text-align: center;
       width: calc(100% - 26px);
     }
@@ -168,9 +169,9 @@
       letter-spacing: 0;
 
       @media only screen and (max-width: config.$bp-tablet) {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 22px;
         text-align: center;
-        color: config.$colors-white-50;
       }
     }
   }

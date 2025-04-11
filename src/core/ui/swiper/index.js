@@ -60,6 +60,14 @@
         const swiperTrainers = new Swiper(sliderTrainers, {
             slidesPerView: 1,
             spaceBetween: 40,
+            breakpoints: {
+                860: {
+                    spaceBetween: 0,
+                },
+                861: {
+                    spaceBetween: 40,
+                },
+            },
             pagination: {
                 el: fractionPagination,
                 type: "fraction",

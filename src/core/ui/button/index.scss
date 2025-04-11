@@ -72,7 +72,8 @@
   padding: 10px 64px;
 
   @media only screen and (max-width: config.$bp-tablet) {
-    padding: 6px 88px;
+    padding: 11px 88px;
+    height: 46px;
   }
 
 
@@ -107,5 +108,15 @@
 
   & > span,  * {
     color: config.$colors-white;
+  }
+}
+
+.button.disabled, .button:disabled {
+  background: rgba(79, 249, 75, 0.6);
+  cursor: not-allowed;
+  pointer-events: none;
+
+  span  {
+    color: rgba(31, 30, 30, 0.2);
   }
 }

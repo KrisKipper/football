@@ -1,0 +1,12 @@
+mixin cookie(params)
+    -
+        const classes = params.mix ? `cookie ${params.mix}` : 'cookie';
+
+    div(class= classes)
+        .cookie__text Сайт использует Cookie-файлы, чтобы сделать Ваше пребывание на нём максимально удобным
+        +buttonTypeDefault({
+            mix: 'cookie__button',
+            type: 'button',
+            text: 'OK'
+        })(data-button= "cookie")
+

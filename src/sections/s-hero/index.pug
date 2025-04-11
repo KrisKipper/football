@@ -11,9 +11,13 @@ section.s-hero#hero
             p.s-hero__announce
                 | объявляет набор
                 br
-                | мальчиков и девочек в возрасте 3+
+                | мальчиков и девочек в возрасте 3+
                 br
-                | от 3 000 ₽/месяц
+                | от 3 000
+                svg.s-hero__announce-rub
+                    use(xlink:href=`assets/icons/default/sprite.svg#rub`)
+                | /месяц
+
             +buttonTypeDefault({text: "Записаться", mobHiddenText: "НА БЕСПЛАТНОЕ ЗАНЯТИЕ", mix: "_size_md s-hero__button"})(data-bs-toggle='modal' data-bs-target='#form')
         .s-hero__ball-container._mob_hidden
             +image({mix: "s-hero__ball ", src: 'assets/media/ball.png', alt: "ball"})

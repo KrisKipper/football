@@ -16,7 +16,7 @@ footer.footer
                 .footer__partners
                     a(href="/news.html").footer__link-news Новости
                     h4.footer__subtitle НАШИ ПАРТНёРЫ:
-                    .row-flex._gap_xxs._mob-flex-wrap
+                    .footer__partners-links
                         each val in partners
                             a(href=val.link).footer__partner-link
                                 +icon({

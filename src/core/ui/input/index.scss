@@ -33,6 +33,7 @@
     border-right: none;
     border-left: none;
     overflow: hidden;
+    border-radius: 0;
     color: config.$colors-white;
     transition: color .3s ease, background-color .3s ease, border-bottom-color .3s ease, border-left-color .3s ease, border-top-color .3s ease, border-right-color .3s ease;
     max-height: 65px;

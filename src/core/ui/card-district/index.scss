@@ -93,7 +93,7 @@
       color: config.$colors-white-50;
 
       @media only screen and (max-width: config.$bp-tablet) {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   }
@@ -125,7 +125,7 @@
     background: config.$colors-bg;
 
     @media only screen and (max-width: config.$bp-tablet) {
-      padding: 12px;
+      padding: 20px 12px;
       align-items: center;
       border-radius: 2px;
       height: max-content;
@@ -168,7 +168,8 @@
       list-style-type: none;
 
       @media only screen and (max-width: config.$bp-tablet) {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 22px;
         letter-spacing: 0;
         text-align: center;
       }

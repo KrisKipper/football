@@ -9,7 +9,6 @@
     position: relative;
 
     @media only screen and (max-width: config.$bp-tablet) {
-      padding-bottom: 248px;
       width: 100%;
     }
   }
@@ -29,9 +28,10 @@
       top: auto;
       bottom: -13px;
       right: auto;
-      left: 5.5vw;
-      width: 243px;
-      height: 256px;
+      left: 10px;
+      width: calc(100vw - 60px);
+      height: auto;
+      position: relative;
     }
   }
 

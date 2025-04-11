@@ -88,6 +88,7 @@
   }
 
   &__swiper-thumbs-title {
+    text-transform: uppercase;
 
     &:before, &:after {
 
@@ -128,7 +129,7 @@
     margin: 60px 0;
 
     @media only screen and (max-width: config.$bp-tablet) {
-      margin: 12px 0;
+      margin: 24px 0 12px;
     }
   }
 

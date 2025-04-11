@@ -27,10 +27,11 @@
     @media only screen and (max-width: config.$bp-tablet) {
       width: 100vw;
       min-width: 100vw;
+      min-height: max-content;
       height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 73px;
     }
 
     &:before {

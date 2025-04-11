@@ -2,10 +2,10 @@
 @use '../../core/lib/scss/index' as lib;
 
 .s-politic {
-  padding-top: 209px;
+  padding-top: 40px;
 
   @media only screen and (max-width: config.$bp-tablet) {
-    padding-top: 124px;
+    padding-top: 32px;
   }
 
   &:last-child {

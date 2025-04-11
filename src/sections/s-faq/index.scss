@@ -3,9 +3,24 @@
 
 .s-faq {
 
+  @media only screen and (max-width: config.$bp-tablet) {
+    padding-bottom: 0;
+  }
+
   &__content {
     @media only screen and (max-width: config.$bp-tablet) {
       margin-top: 16px;
+    }
+  }
+
+  &__icon-bottom {
+    display: none;
+
+    @media only screen and (max-width: config.$bp-tablet) {
+      margin-top: 20px;
+      width: calc(100% - 52px);
+      display: -webkit-box;
+      margin-left: 26px;
     }
   }
 
