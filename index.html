@@ -3,12 +3,8 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="vendors/noUiSlider/nouislider.min.css"/>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.css"/>
   <link rel="stylesheet" href="vendors/bootstrap-modal/bootstrap-modal.min.css"/>
-  <link rel="stylesheet" href="vendors/select2/select2.min.css"/>
-  <link rel="stylesheet" href="vendors/zuck/zuck.css"/>
-  <link rel="stylesheet" href="vendors/fancybox/fancybox.css"/>
   <link rel="stylesheet" href="css/index.css"/>
   <title>Football Skills
   </title>
@@ -40,7 +36,11 @@
           <div class="s-hero__content"><span class="s-hero__subtitle">Первое занятие бесплатно!</span><span class="s-hero__left-subtitle">CHILDREN'S FOOTBALL SCHOOL</span>
             <h1 class="h1"><img class="image s-hero__title-img _mob_hidden" src="assets/media/title.png" alt="football skills"/><img class="image s-hero__title-img_mob _mob_block" src="assets/media/title-mob.png" alt="football skills"/>
             </h1>
-            <p class="s-hero__announce">объявляет набор<br/>мальчиков и девочек в возрасте 3+<br/>от 3 000 ₽/месяц</p>
+            <p class="s-hero__announce">объявляет набор<br/>мальчиков и девочек в возрасте 3+<br/>от 3 000
+              <svg class="s-hero__announce-rub">
+                <use xlink:href="assets/icons/default/sprite.svg#rub"></use>
+              </svg>/месяц
+            </p>
             <button class="button _size_md s-hero__button" type="button" data-bs-toggle="modal" data-bs-target="#form"><span>Записаться<span class="_mob_hidden">НА БЕСПЛАТНОЕ ЗАНЯТИЕ</span></span></button>
           </div>
           <div class="s-hero__ball-container _mob_hidden"><img class="image s-hero__ball " src="assets/media/ball.png" alt="ball"/>
@@ -783,7 +783,7 @@
               </div>
               <div class="card-faq">
                 <div class="card-faq__header">
-                  <div class="card-faq__title"><span class="card-faq__num">02 /</span><span class="card-faq__question">Тренируются ли дети разного возраста в одной группе, например, 5-ти летние с 10-ти летними?</span></div>
+                  <div class="card-faq__title"><span class="card-faq__num">02 /</span><span class="card-faq__question">Тренируются ли дети разного возраста в одной группе, например, 5-ти летние с 10-ти летними?</span></div>
                   <button class="card-faq__button">
                     <svg class="icon card-faq__plus">
                       <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
@@ -869,130 +869,6 @@
           </div>
         </div>
       </section>
-      <div class="modal fade _type_image" tabindex="-1" id="finish">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="modal-close-btn" data-bs-dismiss="modal">
-                <svg class="icon _size_sm">
-                  <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="modal-inner"><img class="image modal__image" src="assets/media/GOAL.png" alt="GOAL!"/><img class="image modal__image-bg" src="assets/media/ballHalf.png" alt=""/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" tabindex="-1" id="form">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="modal-close-btn" data-bs-dismiss="modal">
-                <svg class="icon _size_sm">
-                  <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="modal-inner">
-              <form class="form">
-                <h2 class="form__title">/ ЖДЁМ, КОГДА ЗАБЬЁТЕ ГОЛ! /</h2>
-                <div class="input form__input">
-                  <label class="input__label" for="name">ВАШЕ ИМЯ*</label>
-                  <input class="input__field" type="text" id="name" placeholder="Имя" data-mask="text" required="required"/>
-                </div>
-                <div class="input form__input">
-                  <label class="input__label" for="mobile-phone">ВАШ № телефона*</label>
-                  <input class="input__field" type="text" id="mobile-phone" placeholder="+7 ___ ___-__-__" data-mask="mobile-phone" required="required"/>
-                </div>
-                <div class="input form__input">
-                  <label class="input__label" for="childName">имя ребёнка*</label>
-                  <input class="input__field" type="text" id="childName" placeholder="Имя" data-mask="text" required="required"/>
-                </div>
-                <div class="radio-accordion form__radio-accordion">
-                  <div class="radio-accordion__header">
-                    <h4 class="radio-accordion__label">Возраст ребёнка*</h4>
-                    <button class="radio-accordion__button">
-                      <svg class="icon radio-accordion__icon-plus">
-                        <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
-                      </svg>
-                      <svg class="icon radio-accordion__icon-minus">
-                        <use xlink:href="assets/icons/default/sprite.svg#minus"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="radio-accordion__body">
-                    <div class="radio-group radio-accordion__radio-group">
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="age-0" name="age" value="3-6" required="required"/>
-                        <label class="radio-group__label" for="age-0"><span class="radio-group__custom-radio"></span><span class="radio-group__text">3-6 лет</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="age-1" name="age" value="7-9" required="required"/>
-                        <label class="radio-group__label" for="age-1"><span class="radio-group__custom-radio"></span><span class="radio-group__text">7-9 лет</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="age-2" name="age" value="10-15" required="required"/>
-                        <label class="radio-group__label" for="age-2"><span class="radio-group__custom-radio"></span><span class="radio-group__text">10-15 лет</span></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="radio-accordion form__radio-accordion">
-                  <div class="radio-accordion__header">
-                    <h4 class="radio-accordion__label">Выбор района*</h4>
-                    <button class="radio-accordion__button">
-                      <svg class="icon radio-accordion__icon-plus">
-                        <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
-                      </svg>
-                      <svg class="icon radio-accordion__icon-minus">
-                        <use xlink:href="assets/icons/default/sprite.svg#minus"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="radio-accordion__body">
-                    <div class="radio-group radio-accordion__radio-group">
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="district-0" name="district" value="center" required="required"/>
-                        <label class="radio-group__label" for="district-0"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Центральный р-н</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="district-1" name="district" value="leninsky" required="required"/>
-                        <label class="radio-group__label" for="district-1"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Ленинский р-н</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="district-2" name="district" value="zavodskoy" required="required"/>
-                        <label class="radio-group__label" for="district-2"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Заводский р-н</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="district-3" name="district" value="rudnichnyi" required="required"/>
-                        <label class="radio-group__label" for="district-3"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Рудничный р-н</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="district-4" name="district" value="lesnaya" required="required"/>
-                        <label class="radio-group__label" for="district-4"><span class="radio-group__custom-radio"></span><span class="radio-group__text">мкр-н Лесная поляна</span></label>
-                      </div>
-                      <div class="radio-group__item">
-                        <input class="radio-group__input" type="radio" id="district-5" name="district" value="kirivskiy" required="required"/>
-                        <label class="radio-group__label" for="district-5"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Кировский р-н</span></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__bottom">
-                  <button class="button form__button" type="button"><span>ОТПРАВИТЬ ЗАЯВКУ<span class="_mob_hidden"></span></span></button>
-                  <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="politicForm"/>
-                    <label class="checkbox__label" for="politicForm"><span class="checkbox__custom-checkbox"></span>
-                      <div class="form__labels-bottom"><span class="form__text-bottom">Согласен на обработку персональных данных</span><a class="form__text-bottom _type_link" href="">Политика конфиденциальности</a></div>
-                    </label>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
     <footer class="footer">
       <div class="footer__layout">
@@ -1000,21 +876,21 @@
           <div class="footer__content">
             <div class="footer__sochials">
               <h4 class="footer__subtitle">СВЯЗЬ С НАМИ:</h4>
-              <div class="footer__sochials-links"><a class="footer__sochials-icon" href="https://vk.com/football_skills42">
+              <div class="footer__sochials-links"><a class="footer__sochials-icon" href="https://wa.me/79089498839">
                   <svg class="icon _size_sm ">
-                    <use xlink:href="assets/icons/default/sprite.svg#s1"></use>
+                    <use xlink:href="assets/icons/default/sprite.svg#s1f"></use>
+                  </svg></a><a class="footer__sochials-icon" href="https://vk.com/football_skills42">
+                  <svg class="icon _size_sm ">
+                    <use xlink:href="assets/icons/default/sprite.svg#s2f"></use>
                   </svg></a><a class="footer__sochials-icon" href="https://t.me/+-ycqk1mKl-9hYmQy">
                   <svg class="icon _size_sm ">
-                    <use xlink:href="assets/icons/default/sprite.svg#s2"></use>
-                  </svg></a><a class="footer__sochials-icon" href="https://wa.me/79059612861">
-                  <svg class="icon _size_sm ">
-                    <use xlink:href="assets/icons/default/sprite.svg#s3"></use>
+                    <use xlink:href="assets/icons/default/sprite.svg#s3f"></use>
                   </svg></a>
               </div><a class="footer__link-social" href="mailto:89089498839a@gmail.com">89089498839a@gmail.com</a>
             </div>
             <div class="footer__partners"><a class="footer__link-news" href="/news.html">Новости</a>
               <h4 class="footer__subtitle">НАШИ ПАРТНёРЫ:</h4>
-              <div class="row-flex _gap_xxs _mob-flex-wrap"><a class="footer__partner-link" href="https://2gis.ru/kemerovo/firm/70000001076256370">
+              <div class="footer__partners-links"><a class="footer__partner-link" href="https://2gis.ru/kemerovo/firm/70000001076256370">
                   <svg class="icon footer__partner-link-icon">
                     <use xlink:href="assets/icons/default/sprite.svg#p1"></use>
                   </svg>
@@ -1077,14 +953,138 @@
         </div>
       </div>
     </footer>
+    <div class="cookie">
+      <div class="cookie__text">Сайт использует Cookie-файлы, чтобы сделать Ваше пребывание на нём максимально удобным</div>
+      <button class="button cookie__button" type="button" data-button="cookie"><span>OK<span class="_mob_hidden"></span></span></button>
+    </div>
+    <div class="modal fade _type_image" tabindex="-1" id="finish">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="modal-close-btn" data-bs-dismiss="modal">
+              <svg class="icon _size_sm">
+                <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-inner"><img class="image modal__image" src="assets/media/GOAL.png" alt="GOAL!"/><img class="image modal__image-bg" src="assets/media/ballHalf.png" alt=""/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="form">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="modal-close-btn" data-bs-dismiss="modal">
+              <svg class="icon _size_sm">
+                <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-inner">
+            <form class="form">
+              <h2 class="form__title">/ ЖДЁМ, КОГДА ЗАБЬЁТЕ ГОЛ! /</h2>
+              <div class="input form__input">
+                <label class="input__label" for="name">ВАШЕ ИМЯ*</label>
+                <input class="input__field" type="text" id="name" placeholder="Имя" data-mask="text" required="required"/>
+              </div>
+              <div class="input form__input">
+                <label class="input__label" for="mobile-phone">ВАШ № телефона*</label>
+                <input class="input__field" type="text" id="mobile-phone" placeholder="+7 ___ ___-__-__" data-mask="mobile-phone" required="required"/>
+              </div>
+              <div class="input form__input">
+                <label class="input__label" for="childName">имя ребёнка*</label>
+                <input class="input__field" type="text" id="childName" placeholder="Имя" data-mask="text" required="required"/>
+              </div>
+              <div class="radio-accordion form__radio-accordion">
+                <div class="radio-accordion__header">
+                  <h4 class="radio-accordion__label">Возраст ребёнка*</h4>
+                  <button class="radio-accordion__button">
+                    <svg class="icon radio-accordion__icon-plus">
+                      <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon radio-accordion__icon-minus">
+                      <use xlink:href="assets/icons/default/sprite.svg#minus"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="radio-accordion__body">
+                  <div class="radio-group radio-accordion__radio-group">
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="age-0" name="age" value="3-6" required="required"/>
+                      <label class="radio-group__label" for="age-0"><span class="radio-group__custom-radio"></span><span class="radio-group__text">3-6 лет</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="age-1" name="age" value="7-9" required="required"/>
+                      <label class="radio-group__label" for="age-1"><span class="radio-group__custom-radio"></span><span class="radio-group__text">7-9 лет</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="age-2" name="age" value="10-15" required="required"/>
+                      <label class="radio-group__label" for="age-2"><span class="radio-group__custom-radio"></span><span class="radio-group__text">10-15 лет</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="radio-accordion form__radio-accordion">
+                <div class="radio-accordion__header">
+                  <h4 class="radio-accordion__label">Выбор района*</h4>
+                  <button class="radio-accordion__button">
+                    <svg class="icon radio-accordion__icon-plus">
+                      <use xlink:href="assets/icons/default/sprite.svg#plus"></use>
+                    </svg>
+                    <svg class="icon radio-accordion__icon-minus">
+                      <use xlink:href="assets/icons/default/sprite.svg#minus"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="radio-accordion__body">
+                  <div class="radio-group radio-accordion__radio-group">
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="district-0" name="district" value="center" required="required"/>
+                      <label class="radio-group__label" for="district-0"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Центральный р-н</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="district-1" name="district" value="leninsky" required="required"/>
+                      <label class="radio-group__label" for="district-1"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Ленинский р-н</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="district-2" name="district" value="zavodskoy" required="required"/>
+                      <label class="radio-group__label" for="district-2"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Заводский р-н</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="district-3" name="district" value="rudnichnyi" required="required"/>
+                      <label class="radio-group__label" for="district-3"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Рудничный р-н</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="district-4" name="district" value="lesnaya" required="required"/>
+                      <label class="radio-group__label" for="district-4"><span class="radio-group__custom-radio"></span><span class="radio-group__text">мкр-н Лесная поляна</span></label>
+                    </div>
+                    <div class="radio-group__item">
+                      <input class="radio-group__input" type="radio" id="district-5" name="district" value="kirivskiy" required="required"/>
+                      <label class="radio-group__label" for="district-5"><span class="radio-group__custom-radio"></span><span class="radio-group__text">Кировский р-н</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__bottom">
+                <button class="button _size_md form__button disabled" type="button"><span>ОТПРАВИТЬ ЗАЯВКУ<span class="_mob_hidden"></span></span></button>
+                <div class="checkbox">
+                  <input class="checkbox__input" type="checkbox" id="politicForm"/>
+                  <label class="checkbox__label" for="politicForm"><span class="checkbox__custom-checkbox"></span>
+                    <div class="form__labels-bottom"><span class="form__text-bottom">Согласен на обработку персональных данных</span><a class="form__text-bottom _type_link" href="">Политика конфиденциальности</a></div>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="vendors/imask/imask.min.js"></script>
-    <script src="vendors/noUiSlider/nouislider.min.js"></script>
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="vendors/bootstrap-modal/bootstrap-modal.bundle.min.js"></script>
-    <script src="vendors/select2/select2.min.js"></script>
-    <script src="vendors/zuck/zuck.js"></script>
-    <script src="vendors/fancybox/fancybox.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
