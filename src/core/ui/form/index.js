@@ -3,8 +3,6 @@
         const nameInput = formElement.querySelector('#name');
         const phoneInput = formElement.querySelector('#mobile-phone');
         const childNameInput = formElement.querySelector('#childName');
-        const ageRadioGroup = formElement.querySelector('input[name="age"]:checked');
-        const districtRadioGroup = formElement.querySelector('input[name="district"]:checked');
         const politicCheckbox = formElement.querySelector('#politicForm');
         const submitButton = formElement.querySelector('.form__button');
 
@@ -39,10 +37,11 @@
 
         checkFormValidity();
 
-        submitButton.addEventListener('click', () => {
-            closeModal("form")
-            openModal("finish")
-        });
+        window.closeFinishModalForTime = () => {
+            setTimeout(() => {
+                closeModal("finish")
+            }, 1500)
+        }
     };
 
     const mount = () => {

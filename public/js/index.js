@@ -452,9 +452,10 @@ window.closeModal = function (id) {
           var href = item.dataset.href || '';
           var hashIndex = href.indexOf('#');
           var anchor = hashIndex !== -1 ? href.substring(hashIndex) : '';
-          window.location.href = "index.html".concat(anchor);
+          window.location.href = "".concat(window.location.origin, "/").concat(anchor);
         });
       });
+      console.log(window.location);
     } catch (e) {
       console.error("Error:", e.message);
     }
@@ -698,8 +699,6 @@ window.closeModal = function (id) {
     var nameInput = formElement.querySelector('#name');
     var phoneInput = formElement.querySelector('#mobile-phone');
     var childNameInput = formElement.querySelector('#childName');
-    var ageRadioGroup = formElement.querySelector('input[name="age"]:checked');
-    var districtRadioGroup = formElement.querySelector('input[name="district"]:checked');
     var politicCheckbox = formElement.querySelector('#politicForm');
     var submitButton = formElement.querySelector('.form__button');
     var checkFormValidity = function checkFormValidity() {
@@ -726,10 +725,11 @@ window.closeModal = function (id) {
     });
     politicCheckbox.addEventListener('change', checkFormValidity);
     checkFormValidity();
-    submitButton.addEventListener('click', function () {
-      closeModal("form");
-      openModal("finish");
-    });
+    window.closeFinishModalForTime = function () {
+      setTimeout(function () {
+        closeModal("finish");
+      }, 1500);
+    };
   };
   var mount = function mount() {
     document.querySelectorAll('.form').forEach(component);

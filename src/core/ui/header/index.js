@@ -29,9 +29,13 @@
                     const hashIndex = href.indexOf('#');
                     const anchor = hashIndex !== -1 ? href.substring(hashIndex) : '';
 
-                    window.location.href = `index.html${anchor}`;
+
+
+                    window.location.href = `${window.location.origin}/${anchor}`;
                 });
             });
+
+            console.log(window.location)
 
         } catch (e) {
             console.error("Error:", e.message);
